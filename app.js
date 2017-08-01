@@ -92,6 +92,10 @@ function initAutocomplete() {
         //    $('#aqi6').append( "Aqi: " + response.data.iaqi.o3.v)
         // })
 
+        // $.ajax(settings).done(function (response) {
+        // console.log(response);
+        // })
+
         $.ajax(settings).done(function (response) {
            $('#aqi').html( "Aqi: " + response.data.iaqi.o3.v)
         })
