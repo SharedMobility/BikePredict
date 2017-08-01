@@ -83,8 +83,17 @@ function initAutocomplete() {
           "method": "GET"
       }
 
+        // $.ajax(settings).done(function (response) {
+        //    $('#aqi').append( "Aqi: " + response.data.iaqi.o3.v)
+        //    $('#aqi2').append( "Aqi: " + response.data.iaqi.o3.v)
+        //    $('#aqi3').append( "Aqi: " + response.data.iaqi.o3.v)
+        //    $('#aqi4').append( "Aqi: " + response.data.iaqi.o3.v)
+        //    $('#aqi5').append( "Aqi: " + response.data.iaqi.o3.v)
+        //    $('#aqi6').append( "Aqi: " + response.data.iaqi.o3.v)
+        // })
+
         $.ajax(settings).done(function (response) {
-          console.log(response.data)
+           $('#aqi').html( "Aqi: " + response.data.iaqi.o3.v)
         })
       })
   })
