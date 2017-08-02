@@ -83,22 +83,30 @@ function initAutocomplete() {
           "method": "GET"
       }
 
-        // $.ajax(settings).done(function (response) {
-        //    $('#aqi').append( "Aqi: " + response.data.iaqi.o3.v)
-        //    $('#aqi2').append( "Aqi: " + response.data.iaqi.o3.v)
-        //    $('#aqi3').append( "Aqi: " + response.data.iaqi.o3.v)
-        //    $('#aqi4').append( "Aqi: " + response.data.iaqi.o3.v)
-        //    $('#aqi5').append( "Aqi: " + response.data.iaqi.o3.v)
-        //    $('#aqi6').append( "Aqi: " + response.data.iaqi.o3.v)
+        $.ajax(settings).done(function (response) {
+          
+          $('#displayInfo').html( 
+            `
+            <div>o3: ${response.data.iaqi.o3.v}</div>
+            <div>Aqi: ${response.data.aqi}</div>
+            <div>Pm25: ${response.data.iaqi.pm25.v}</div>
+            <div>Nearest city:<a href="${response.data.city.url}">${response.data.city.name}</a></div>
+            <div>Recording Station: <a href="${response.data.attributions[0].url}">${response.data.attributions[0].name}</a></div>
+            <div>Updated Time: ${response.data.time.s}</div>
+            `
+          )
+        })
+        //   $('#aqi').append( "o3: " + response.data.iaqi.o3.v);
+        //    $('#aqi2').append( "Aqi: " + response.data.aqi);
         // })
 
         // $.ajax(settings).done(function (response) {
         // console.log(response);
         // })
 
-        $.ajax(settings).done(function (response) {
-           $('#aqi').html( "Aqi: " + response.data.iaqi.o3.v)
-        })
+        // $.ajax(settings).done(function (response) {
+        //    $('#aqi').html( "o3: " + response.data.iaqi.o3.v)
+        // })
       })
   })
 }
