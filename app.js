@@ -91,7 +91,7 @@ function initAutocomplete() {
             <div>Aqi: ${response.data.aqi}</div>
             <div>Pm25: ${response.data.iaqi.pm25.v}</div>
             <div>Nearest city:<a href="${response.data.city.url}">${response.data.city.name}</a></div>
-            <div>Recording Station: <a href="${response.data.attributions[0].url}">${response.data.attributions[0].name}</a></div>
+            <div>Recording station: <a href="${response.data.attributions[0].url}">${response.data.attributions[0].name}</a></div>
             <div>Updated Time: ${response.data.time.s}</div>
             `
           )
