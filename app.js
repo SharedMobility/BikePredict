@@ -13,7 +13,7 @@ function initAutocomplete() {
     div.innerHTML = '<img src=http://i.imgur.com/6yQ0Cbe.png>';
     legend.appendChild(div);
 
-    map.controls[google.maps.ControlPosition.BOTTOM].push(legend);
+    map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(legend);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -93,7 +93,7 @@ function initAutocomplete() {
           
           $('#displayInfo').html( 
             `
-            <div>Aqi: ${response.data.aqi}</div>
+            <div>Air Quality Index: ${response.data.aqi}</div>
             <div>Nearest city:<a href="${response.data.city.url}">${response.data.city.name}</a></div>
             <div>Recording station: <a href="${response.data.attributions[0].url}">${response.data.attributions[0].name}</a></div>
             <div>Updated Time: ${response.data.time.s}</div>
