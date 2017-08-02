@@ -8,6 +8,13 @@ function initAutocomplete() {
 
   var bikeLayer = new google.maps.BicyclingLayer();
   bikeLayer.setMap(map);
+
+  var legend = document.getElementById('legend');
+    var div = document.createElement('div');
+    div.innerHTML = '<img src=http://i.imgur.com/6yQ0Cbe.png>';
+    legend.appendChild(div);
+
+    map.controls[google.maps.ControlPosition.BOTTOM].push(legend);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
