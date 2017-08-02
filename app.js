@@ -1,6 +1,5 @@
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-
     center: {lat: 34, lng: -84},
     zoom: 12,
     mapTypeId: 'terrain'
@@ -110,4 +109,3 @@ function initAutocomplete() {
       })
   })
 }
-initAutocomplete();
