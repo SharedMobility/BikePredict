@@ -94,18 +94,6 @@ function initAutocomplete() {
             `
           )
         })
-        //   $('#aqi').append( "o3: " + response.data.iaqi.o3.v);
-        //    $('#aqi2').append( "Aqi: " + response.data.aqi);
-        // })
-
-        // $.ajax(settings).done(function (response) {
-        // console.log(response);
-        // })
-
-        // $.ajax(settings).done(function (response) {
-        //    $('#aqi').html( "o3: " + response.data.iaqi.o3.v)
-        // })
       })
   })
 }
-initAutocomplete();
