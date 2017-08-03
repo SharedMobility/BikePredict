@@ -98,6 +98,17 @@ function initAutocomplete() {
       });
 
         $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
+          
+          function aqiMessage () {if (secondResponse[0].data.aqi <= 50) {
+            return "The air quality is good today."
+          } else if (secondResponse[0].data.aqi <= 100) {
+            return "The air quality is questionable today."
+          } else if (secondResponse[0].data.aqi <= 150) {
+            return "The air quality sucks today."  
+          } else {
+            return "Don't leave your house."}
+        };
+
           $('#displayWeatherInfo').html( 
             `
             <div>Apparent Temperature: ${firstResponse[0].currently.apparentTemperature} Degrees Fahrenheit</div>
@@ -108,8 +119,9 @@ function initAutocomplete() {
             <div>Wind Speed: ${firstResponse[0].currently.windSpeed}</div>
             <div>Chance of Rain: ${firstResponse[0].currently.precipProbability}</div>
             <div>Air Quality Index: ${secondResponse[0].data.aqi}</div>
-            <div>Nearest city:<a href="${secondResponse[0].data.city.url}">${secondResponse[0].data.city.name}</a></div>
-            <div>Recording station: <a href="${secondResponse[0].data.attributions[0].url}">${secondResponse[0].data.attributions[0].name}</a></div>
+            <div>Air Quality Forecast: ${aqiMessage()}</div>
+            <div>Nearest City: <a href="${secondResponse[0].data.city.url}">${secondResponse[0].data.city.name}</a></div>
+            <div>Recording Station: <a href="${secondResponse[0].data.attributions[0].url}">${secondResponse[0].data.attributions[0].name}</a></div>
             <div>Updated Time: ${secondResponse[0].data.time.s}</div>
             `
           )
