@@ -75,28 +75,42 @@ function initAutocomplete() {
 
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
-    console.log(latVal, longVal);
     
       $(function(){
-      const AQI_URL = 'https://api.waqi.info/feed/geo:' + `${latVal};${longVal}` + '/?'
-      var settings = {
+      
+      var weatherCall =
+        $.ajax({
           "async": true,
           "crossDomain": true,
-          "url": AQI_URL,
-          "data": {
-            "token": "7af2191ef71f827a4de1cbcdd9463989a7c3bb6c"
-          },
+          "url": 'https://cors-anywhere.herokuapp.com/' + 'https://api.darksky.net/forecast/455fb5192a422fe4e13e58391b3c0a17/' + `${latVal},${longVal}`,
           "method": "GET"
-      }
+      });
 
-        $.ajax(settings).done(function (response) {
-          
-          $('#displayInfo').html( 
+      var aqiCall =
+      $.ajax({
+        "async": true,
+        "crossDomain": true,
+        "url": 'https://api.waqi.info/feed/geo:' + `${latVal};${longVal}` + '/?',
+        "data": {
+        "token": "7af2191ef71f827a4de1cbcdd9463989a7c3bb6c"
+        },
+        "method": "GET"
+      });
+
+        $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
+          $('#displayWeatherInfo').html( 
             `
-            <div>Air Quality Index: ${response.data.aqi}</div>
-            <div>Nearest city:<a href="${response.data.city.url}">${response.data.city.name}</a></div>
-            <div>Recording station: <a href="${response.data.attributions[0].url}">${response.data.attributions[0].name}</a></div>
-            <div>Updated Time: ${response.data.time.s}</div>
+            <div>Apparent Temperature: ${firstResponse[0].currently.apparentTemperature} Degrees Fahrenheit</div>
+            <div>Humidity: ${firstResponse[0].currently.humidity}</div>
+            <div>UV Index: ${firstResponse[0].currently.uvIndex}</div>
+            <div>Wind Bearing: ${firstResponse[0].currently.windBearing}</div>
+            <div>Wind Gust: ${firstResponse[0].currently.windGust}</div>
+            <div>Wind Speed: ${firstResponse[0].currently.windSpeed}</div>
+            <div>Chance of Rain: ${firstResponse[0].currently.precipProbability}</div>
+            <div>Air Quality Index: ${secondResponse[0].data.aqi}</div>
+            <div>Nearest city:<a href="${secondResponse[0].data.city.url}">${secondResponse[0].data.city.name}</a></div>
+            <div>Recording station: <a href="${secondResponse[0].data.attributions[0].url}">${secondResponse[0].data.attributions[0].name}</a></div>
+            <div>Updated Time: ${secondResponse[0].data.time.s}</div>
             `
           )
         })
