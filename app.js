@@ -100,29 +100,43 @@ function initAutocomplete() {
         $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
           
           function aqiMessage () {if (secondResponse[0].data.aqi <= 50) {
-            return "The air quality is good today."
-          } else if (secondResponse[0].data.aqi <= 100) {
-            return "The air quality is questionable today."
-          } else if (secondResponse[0].data.aqi <= 150) {
-            return "The air quality sucks today."  
-          } else {
-            return "Don't leave your house."}
-        };
+              return "Air quality is considered satisfactory, and air pollution poses little or no risk."
+            } else if (secondResponse[0].data.aqi <= 100) {
+              return "Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
+            } else if (secondResponse[0].data.aqi <= 150) {
+              return "Members of sensitive groups may experience health effects. The general public is not likely to be affected."
+            } else if (secondResponse[0].data.aqi <= 200) {
+              return "Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."  
+            } else if (secondResponse[0].data.aqi <= 300) {
+              return "Air quality is dangerous.  Health warnings of emergency conditions. The entire population is more likely to be affected."    
+            } else {
+              return "Air quality is acutely dangerous.  Health alert: everyone may experience more serious health effects."}
+          };
+          
+          function uviMessage () {if (firstResponse[0].currently.uvIndex <= 2) {
+              return "A UV Index reading of 0 to 2 means low danger from the sun's UV rays for the average person."
+            } else if (firstResponse[0].currently.uvIndex <= 5) {
+              return "A UV Index reading of 3 to 5 means moderate risk of harm from unprotected sun exposure."
+            } else if (firstResponse[0].currently.uvIndex <= 7) {
+              return "A UV Index reading of 6 to 7 means high risk of harm from unprotected sun exposure. Protection against skin and eye damage is needed."
+            } else if (firstResponse[0].currently.uvIndex <= 10) {
+              return "A UV Index reading of 8 to 10 means very high risk of harm from unprotected sun exposure. Take extra precautions because unprotected skin and eyes will be damaged and can burn quickly."  
+            } else {
+              return "A UV Index reading of 11 or more means extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
+          };
+
 
           $('#displayWeatherInfo').html( 
             `
-            <div>Apparent Temperature: ${firstResponse[0].currently.apparentTemperature} Degrees Fahrenheit</div>
-            <div>Humidity: ${firstResponse[0].currently.humidity}</div>
+            <div>Temperature: ${firstResponse[0].currently.temperature} °F</div>
+            <div>Humidity: ${firstResponse[0].currently.humidity*100}%</div>
             <div>UV Index: ${firstResponse[0].currently.uvIndex}</div>
-            <div>Wind Bearing: ${firstResponse[0].currently.windBearing}</div>
-            <div>Wind Gust: ${firstResponse[0].currently.windGust}</div>
-            <div>Wind Speed: ${firstResponse[0].currently.windSpeed}</div>
-            <div>Chance of Rain: ${firstResponse[0].currently.precipProbability}</div>
+            <div>UV Index Summary: ${uviMessage()}</div>
+            <div>Wind Direction: ${firstResponse[0].currently.windBearing}° out of 360°</div>
+            <div>Wind Speed: ${firstResponse[0].currently.windSpeed} mph</div>
+            <div>Chance of Rain: ${firstResponse[0].currently.precipProbability*100}%</div>
             <div>Air Quality Index: ${secondResponse[0].data.aqi}</div>
-            <div>Air Quality Forecast: ${aqiMessage()}</div>
-            <div>Nearest City: <a href="${secondResponse[0].data.city.url}">${secondResponse[0].data.city.name}</a></div>
-            <div>Recording Station: <a href="${secondResponse[0].data.attributions[0].url}">${secondResponse[0].data.attributions[0].name}</a></div>
-            <div>Updated Time: ${secondResponse[0].data.time.s}</div>
+            <div>Air Quality Summary: ${aqiMessage()}</div>
             `
           )
         })
