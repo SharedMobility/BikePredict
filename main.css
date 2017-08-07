@@ -3,6 +3,7 @@
 #map {
   height: 50%;
   width: 100%;
+  border: 1px black solid;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -77,6 +78,91 @@ html, body {
   font-weight: 500;
   padding: 6px 12px;
 }
+
 #target {
   width: 345px;
+}
+
+#api_info {
+  border: 1px solid pink;
+  position: relative;
+} 
+
+.component {
+  border-radius: 4px;
+  color: white;
+  font-size: 2em;
+  margin: 40px 0;
+  padding: 4px 0;
+  position: relative;
+  text-align: center;
+  width: 60px;
+  top: 40px;
+}
+
+.component:before {
+    color: blue;
+    font-size: 0.5em;
+    left: 0;
+    position: absolute;
+     top: -20px; 
+}
+
+.temp {
+  background: crimson;
+  border: 1px solid crimson;
+}
+
+.temp:before {
+    content: 'Temperature';
+}
+
+.humidity {
+  background: green;
+  border: 1px solid green;
+}
+
+.humidity:before {
+  content: 'Humidity';
+}
+
+.aqi {
+  background: orange;
+  border: 1px solid orange;
+}
+
+.aqi:before {
+  content: 'Aqi';
+}
+
+.uv {
+  background: blue;
+  border: 1px solid blue;
+}
+
+.uv:before {
+  content: 'UVIndex';
+}
+
+.wind {
+  background: purple;
+  border: 1px solid purple;
+}
+
+.wind:before {
+  content: 'Wind';
+}
+
+.rain {
+  background: gray;
+  border: 1px solid gray;
+}
+
+.rain:before {
+  content: 'Rain';
+}
+
+.summary {
+  position: relative;
+  top: 100px;
 }

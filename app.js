@@ -1,7 +1,7 @@
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 34, lng: -84},
-    zoom: 12,
+    zoom: 11,
     mapTypeId: 'terrain'
   });
 
@@ -126,17 +126,16 @@ function initAutocomplete() {
           };
 
 
-          $('#displayWeatherInfo').html( 
+          $('#api_info').html( 
             `
-            <div>Temperature: ${firstResponse[0].currently.temperature} °F</div>
-            <div>Humidity: ${firstResponse[0].currently.humidity*100}%</div>
-            <div>UV Index: ${firstResponse[0].currently.uvIndex}</div>
-            <div>UV Index Summary: ${uviMessage()}</div>
-            <div>Wind Direction: ${firstResponse[0].currently.windBearing}° out of 360°</div>
-            <div>Wind Speed: ${firstResponse[0].currently.windSpeed} mph</div>
-            <div>Chance of Rain: ${firstResponse[0].currently.precipProbability*100}%</div>
-            <div>Air Quality Index: ${secondResponse[0].data.aqi}</div>
-            <div>Air Quality Summary: ${aqiMessage()}</div>
+            <span class="component temp">${firstResponse[0].currently.temperature}°F</span>
+            <span class="component humidity">${firstResponse[0].currently.humidity*100}%</span>
+            <span class="component wind">${firstResponse[0].currently.windSpeed} mph</span>
+            <span class="component rain">${firstResponse[0].currently.precipProbability*100}%</span>
+            <span class="component aqi">${secondResponse[0].data.aqi}</span>
+            <span class="component uv">${firstResponse[0].currently.uvIndex}</span>
+            <div class="summary aqimessage">${aqiMessage()}</div>
+            <div class="summary uvmessage">${uviMessage()}</div>
             `
           )
         })
