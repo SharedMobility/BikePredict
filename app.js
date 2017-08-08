@@ -10,7 +10,7 @@ function initAutocomplete() {
 
   var legend = document.getElementById('legend');
     var div = document.createElement('div');
-    div.innerHTML = '<img src=http://i.imgur.com/6yQ0Cbe.png>';
+    div.innerHTML = '<img src="legend.png">';
     legend.appendChild(div);
 
     map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(legend);
@@ -125,13 +125,14 @@ function initAutocomplete() {
               return "A UV Index reading of 11 or more means extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
 
+          const rain = Math.round(firstResponse[0].currently.precipProbability*100);
 
           $('#api_info').html( 
             `
             <span class="component temp">${firstResponse[0].currently.temperature}°F</span>
             <span class="component humidity">${firstResponse[0].currently.humidity*100}%</span>
             <span class="component wind">${firstResponse[0].currently.windSpeed} mph</span>
-            <span class="component rain">${firstResponse[0].currently.precipProbability*100}%</span>
+            <span class="component rain">${rain}%</span>
             <span class="component aqi">${secondResponse[0].data.aqi}</span>
             <span class="component uv">${firstResponse[0].currently.uvIndex}</span>
             <div class="summary aqimessage">${aqiMessage()}</div>

@@ -138,6 +138,8 @@ html, body {
 .uv {
   background: blue;
   border: 1px solid blue;
+  min-width: 100px;
+  max-width: 1000px;
 }
 
 .uv:before {
@@ -150,7 +152,7 @@ html, body {
 }
 
 .wind:before {
-  content: 'Wind';
+  content: 'Wind Speed';
 }
 
 .rain {
