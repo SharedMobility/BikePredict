@@ -1,6 +1,7 @@
 function initAutocomplete() {
+  $(function(){
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 34, lng: -84},
+    center: {lat: 3, lng: -124},
     zoom: 11,
     mapTypeId: 'terrain'
   });
@@ -10,10 +11,9 @@ function initAutocomplete() {
 
   var legend = document.getElementById('legend');
     var div = document.createElement('div');
-    div.innerHTML = '<img src="legend.png">';
+    div.innerHTML = '<img src="bike.png">';
     legend.appendChild(div);
-
-    map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(legend);
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -29,6 +29,7 @@ function initAutocomplete() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener('places_changed', function() {
+    
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -72,12 +73,12 @@ function initAutocomplete() {
       }
     });
     map.fitBounds(bounds);
+    map.setZoom(13);
 
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
-    
-      $(function(){
-      
+    $("#explanation").hide();
+
       var weatherCall =
         $.ajax({
           "async": true,
@@ -87,14 +88,14 @@ function initAutocomplete() {
       });
 
       var aqiCall =
-      $.ajax({
-        "async": true,
-        "crossDomain": true,
-        "url": 'https://api.waqi.info/feed/geo:' + `${latVal};${longVal}` + '/?',
-        "data": {
-        "token": "7af2191ef71f827a4de1cbcdd9463989a7c3bb6c"
-        },
-        "method": "GET"
+        $.ajax({
+          "async": true,
+          "crossDomain": true,
+          "url": 'https://api.waqi.info/feed/geo:' + `${latVal};${longVal}` + '/?',
+          "data": {
+          "token": "7af2191ef71f827a4de1cbcdd9463989a7c3bb6c"
+          },
+          "method": "GET"
       });
 
         $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
@@ -126,11 +127,12 @@ function initAutocomplete() {
           };
 
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
+          const humid = Math.round(firstResponse[0].currently.humidity*100);
 
           $('#api_info').html( 
             `
             <span class="component temp">${firstResponse[0].currently.temperature}°F</span>
-            <span class="component humidity">${firstResponse[0].currently.humidity*100}%</span>
+            <span class="component humidity">${humid}%</span>
             <span class="component wind">${firstResponse[0].currently.windSpeed} mph</span>
             <span class="component rain">${rain}%</span>
             <span class="component aqi">${secondResponse[0].data.aqi}</span>
@@ -143,3 +145,4 @@ function initAutocomplete() {
       })
   })
 }
+    

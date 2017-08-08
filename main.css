@@ -17,6 +17,10 @@ html, body {
   font-weight: 300;
 }
 
+.hidden {
+  display: none;
+}
+
 #infowindow-content .title {
   font-weight: bold;
 }
@@ -84,8 +88,8 @@ html, body {
 }
 
 #api_info {
-  border: 1px solid pink;
   position: relative;
+  padding-bottom: 30px;
 } 
 
 .component {
@@ -93,11 +97,11 @@ html, body {
   color: white;
   font-size: 2em;
   margin: 40px 0;
-  padding: 4px 0;
+  padding: 4px 40px;
   position: relative;
   text-align: center;
-  width: 60px;
   top: 40px;
+  box-sizing: border-box;
 }
 
 .component:before {
@@ -138,12 +142,10 @@ html, body {
 .uv {
   background: blue;
   border: 1px solid blue;
-  min-width: 100px;
-  max-width: 1000px;
 }
 
 .uv:before {
-  content: 'UVIndex';
+  content: 'UV Index';
 }
 
 .wind {
