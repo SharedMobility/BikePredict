@@ -17,6 +17,10 @@ html, body {
   font-weight: 300;
 }
 
+#explanation {
+  font-family: Roboto;
+}
+
 .hidden {
   display: none;
 }
@@ -89,27 +93,32 @@ html, body {
 
 #api_info {
   position: relative;
-  padding-bottom: 30px;
 } 
 
 .component {
   border-radius: 4px;
   color: white;
-  font-size: 2em;
+  font-size: 1em;
+  font-family: Roboto;
   margin: 40px auto;
-  padding: 4px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   position: relative;
   text-align: center;
-  top: 40px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .component:before {
-    color: blue;
-    font-size: 0.5em;
-    left: 0;
-    position: absolute;
-     top: -20px; 
+  width: 100%;
+  color: black;
+  font-size: 1em;
+  left: 0;
+  position: absolute;
+  top: -20px;
+  font-family: Roboto;
 }
 
 .temp {
@@ -131,8 +140,8 @@ html, body {
 }
 
 .aqi {
-  background: orange;
-  border: 1px solid orange;
+  background: purple;
+  border: 1px solid purple;
 }
 
 .aqi:before {
@@ -149,8 +158,8 @@ html, body {
 }
 
 .wind {
-  background: purple;
-  border: 1px solid purple;
+  background: orange;
+  border: 1px solid orange;
 }
 
 .wind:before {
@@ -166,7 +175,16 @@ html, body {
   content: 'Rain';
 }
 
-.summary {
-  position: relative;
-  top: 100px;
+.aqimessage {
+  padding-top: 5px;
+  color: white;
+  font-family: Roboto;
+  font-size: 11px;
+}
+
+.uvmessage {
+  padding-top: 5px;
+  color: white;
+  font-family: Roboto;
+  font-size: 11px;
 }

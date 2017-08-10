@@ -11,9 +11,8 @@ function initAutocomplete() {
 
   var legend = document.getElementById('legend');
     var div = document.createElement('div');
-    div.innerHTML = '<img src="bike.png">';
+    div.innerHTML = '<img src="legend.png">';
     legend.appendChild(div);
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -135,10 +134,8 @@ function initAutocomplete() {
             <div class="component temp">${firstResponse[0].currently.temperature}°F</div>
             <div class="component wind">${firstResponse[0].currently.windSpeed} mph</div>
             <div class="component rain">${rain}%</div>
-            <div class="component aqi">${secondResponse[0].data.aqi}</div>
-            <div class="component uv">${firstResponse[0].currently.uvIndex}</div>
-            <div class="summary aqimessage">${aqiMessage()}</div>
-            <div class="summary uvmessage">${uviMessage()}</div>
+            <div class="component aqi">${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></div>
+            <div class="component uv">${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></div>
             `
           )
         })
