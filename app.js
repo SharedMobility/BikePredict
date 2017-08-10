@@ -114,15 +114,15 @@ function initAutocomplete() {
           };
           
           function uviMessage () {if (firstResponse[0].currently.uvIndex <= 2) {
-              return "A UV Index reading of 0 to 2 means low danger from the sun's UV rays for the average person."
+              return "Low danger from the sun's UV rays for the average person."
             } else if (firstResponse[0].currently.uvIndex <= 5) {
-              return "A UV Index reading of 3 to 5 means moderate risk of harm from unprotected sun exposure."
+              return "Moderate risk of harm from unprotected sun exposure."
             } else if (firstResponse[0].currently.uvIndex <= 7) {
-              return "A UV Index reading of 6 to 7 means high risk of harm from unprotected sun exposure. Protection against skin and eye damage is needed."
+              return "High risk of harm from unprotected sun exposure. Protection against skin and eye damage is needed."
             } else if (firstResponse[0].currently.uvIndex <= 10) {
-              return "A UV Index reading of 8 to 10 means very high risk of harm from unprotected sun exposure. Take extra precautions because unprotected skin and eyes will be damaged and can burn quickly."  
+              return "Very high risk of harm from unprotected sun exposure. Take extra precautions because unprotected skin and eyes will be damaged and can burn quickly."  
             } else {
-              return "A UV Index reading of 11 or more means extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
+              return "Extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
 
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
