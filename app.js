@@ -131,12 +131,12 @@ function initAutocomplete() {
 
           $('#api_info').html( 
             `
-            <span class="component temp">${firstResponse[0].currently.temperature}°F</span>
-            <span class="component humidity">${humid}%</span>
-            <span class="component wind">${firstResponse[0].currently.windSpeed} mph</span>
-            <span class="component rain">${rain}%</span>
-            <span class="component aqi">${secondResponse[0].data.aqi}</span>
-            <span class="component uv">${firstResponse[0].currently.uvIndex}</span>
+            <div class="component humidity">${humid}%</div>
+            <div class="component temp">${firstResponse[0].currently.temperature}°F</div>
+            <div class="component wind">${firstResponse[0].currently.windSpeed} mph</div>
+            <div class="component rain">${rain}%</div>
+            <div class="component aqi">${secondResponse[0].data.aqi}</div>
+            <div class="component uv">${firstResponse[0].currently.uvIndex}</div>
             <div class="summary aqimessage">${aqiMessage()}</div>
             <div class="summary uvmessage">${uviMessage()}</div>
             `
