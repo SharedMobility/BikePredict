@@ -21,7 +21,7 @@ html, body {
 }
 
 #explanation {
-  background-color: green;
+  background-color: #95E8B0;
   padding: 15%;
   font-family: Roboto;
   text-align: center;
@@ -140,8 +140,8 @@ html, body {
 }
 
 .temp {
-  background: crimson;
-  border: 1px solid crimson;
+  background:#EBB5FF;
+  border: 1px solid #EBB5FF;
 }
 
 .temp:before {
@@ -149,8 +149,8 @@ html, body {
 }
 
 .humidity {
-  background: green;
-  border: 1px solid green;
+  background: #3AFFA9;
+  border: 1px solid #3AFFA9;
 }
 
 .humidity:before {
@@ -158,8 +158,8 @@ html, body {
 }
 
 .aqi {
-  background: purple;
-  border: 1px solid purple;
+  background: #36E8E4;
+  border: 1px solid #36E8E4;
 }
 
 .aqi:before {
@@ -167,8 +167,8 @@ html, body {
 }
 
 .uv {
-  background: blue;
-  border: 1px solid blue;
+  background: #4E32FF;
+  border: 1px solid #4E32FF;
 }
 
 .uv:before {
@@ -176,8 +176,8 @@ html, body {
 }
 
 .wind {
-  background: orange;
-  border: 1px solid orange;
+  background: #3AB7FF;
+  border: 1px solid #3AB7FF;
 }
 
 .wind:before {
@@ -185,12 +185,12 @@ html, body {
 }
 
 .rain {
-  background: gray;
-  border: 1px solid gray;
+  background: #6485E8;
+  border: 1px solid #6485E8;
 }
 
 .rain:before {
-  content: 'Rain';
+  content: 'Chance of Rain';
 }
 
 .aqimessage {
