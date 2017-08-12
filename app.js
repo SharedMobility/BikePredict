@@ -74,7 +74,7 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     $("#explanation").hide();
     $("#api_info").show();
-    $("#legend  ").show();
+    $("#legend").show();
 
       var weatherCall =
         $.ajax({
