@@ -9,12 +9,6 @@ function initAutocomplete() {
 
   var bikeLayer = new google.maps.BicyclingLayer();
   bikeLayer.setMap(map);
-
-  var legend = document.getElementById('legend');
-    var div = document.createElement('div');
-    div.innerHTML = '<img src="legend.png">';
-    legend.appendChild(div);
-    map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(legend);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -80,6 +74,7 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     $("#explanation").hide();
     $("#api_info").show();
+    $("#legend").show();
 
       var weatherCall =
         $.ajax({

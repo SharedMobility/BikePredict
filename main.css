@@ -1,9 +1,9 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-  height: 50%;
+  height: 55%;
   width: 100%;
-  border: 1px black solid;
+
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -12,21 +12,30 @@ html, body {
   padding: 0;
 }
 
+
 #description {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
+  height: 100%;
 }
 
 #explanation {
   background-color: green;
-  padding: 10%;
+  padding: 15%;
   font-family: Roboto;
   text-align: center;
 }
 
-.hidden {
+#legend {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#legend img {
+  display: block;
+  margin: auto;
 }
 
 #infowindow-content .title {
