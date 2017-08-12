@@ -236,7 +236,7 @@ a[href^="https://www.google.com/maps"] {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 920px) {
   #api_info {
     padding: 75px;
   }
