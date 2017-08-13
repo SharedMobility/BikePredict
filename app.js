@@ -1,8 +1,8 @@
 function initAutocomplete() {
   $(function(){
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 3, lng: -124},
-    zoom: 11,
+    center: {lat: 37, lng: -95},
+    zoom: 4,
     disableDefaultUI: true,
     mapTypeId: 'terrain'
   });

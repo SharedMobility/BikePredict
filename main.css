@@ -1,13 +1,17 @@
 #map {
   height: 55%;
-  width: 100%;
-
+  width: 90%;
+  margin: auto;
 }
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 #description {
@@ -18,8 +22,7 @@ html, body {
 }
 
 #explanation {
-  background-color: #95E8B0;
-  padding: 15%;
+  padding-top: 5%;
   font-family: Roboto;
   text-align: center;
 }
@@ -77,13 +80,13 @@ html, body {
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   margin-left: 12px;
   padding: 0 11px 0 13px;
   text-align: center;
   text-overflow: ellipsis;
-  width: 400px;
+  width: 210px;
 }
 
 #pac-input:focus {
@@ -231,6 +234,7 @@ a[href^="https://www.google.com/maps"] {
     padding-top: 15px;
     top: -55px;
   }
+  
   .aqimessage, .uvmessage {
     font-size: 14px;
   }
