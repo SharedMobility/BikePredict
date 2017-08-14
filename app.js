@@ -97,7 +97,7 @@ function initAutocomplete() {
 
         $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
           
-          function aqiMessage () {if (secondResponse[0].data.aqi <= 50) {
+          function aqiMessage() {if (secondResponse[0].data.aqi <= 50) {
               return "Air quality is considered satisfactory, and air pollution poses little or no risk."
             } else if (secondResponse[0].data.aqi <= 100) {
               return "Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
@@ -111,7 +111,7 @@ function initAutocomplete() {
               return "Air quality is acutely dangerous.  Health alert: everyone may experience more serious health effects."}
           };
           
-          function uviMessage () {if (firstResponse[0].currently.uvIndex <= 2) {
+          function uviMessage() {if (firstResponse[0].currently.uvIndex <= 2) {
               return "Low danger from the sun's UV rays for the average person."
             } else if (firstResponse[0].currently.uvIndex <= 5) {
               return "Moderate risk of harm from unprotected sun exposure."
@@ -123,6 +123,43 @@ function initAutocomplete() {
               return "Extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
 
+        function windDirection() {
+            if (firstResponse[0].currently.windBearing <= 11.25) {
+            return "N"
+          } else if (firstResponse[0].currently.windBearing <= 33.75) {
+            return "NNE"
+          } else if (firstResponse[0].currently.windBearing <= 56.25) {
+            return "NE"
+          } else if (firstResponse[0].currently.windBearing <= 78.75) {
+            return "ENE"
+          } else if (firstResponse[0].currently.windBearing <= 101.25) {
+            return "E" 
+          } else if (firstResponse[0].currently.windBearing <= 123.75) {
+            return "ESE" 
+          } else if (firstResponse[0].currently.windBearing <= 146.25) {
+            return "SE" 
+          } else if (firstResponse[0].currently.windBearing <= 168.75) {
+            return "SSE"
+          } else if (firstResponse[0].currently.windBearing <= 191.25) {
+            return "S" 
+          } else if (firstResponse[0].currently.windBearing <= 213.75) {
+            return "SSW" 
+          } else if (firstResponse[0].currently.windBearing <= 236.25) {
+            return "SW" 
+          } else if (firstResponse[0].currently.windBearing <= 258.75) {
+            return "WSW" 
+          } else if (firstResponse[0].currently.windBearing <= 281.25) {
+            return "W" 
+          } else if (firstResponse[0].currently.windBearing <= 303.75) {
+            return "WNW" 
+          } else if (firstResponse[0].currently.windBearing <= 326.25) {
+            return "NW" 
+          } else if (firstResponse[0].currently.windBearing <= 348.75) {
+            return "NNW" 
+          } else {
+            return "N"}
+        };
+
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
           const humid = Math.round(firstResponse[0].currently.humidity*100);
 
@@ -130,7 +167,7 @@ function initAutocomplete() {
             `
             <div class="component temp">${firstResponse[0].currently.temperature}°F</div>
             <div class="component humidity">${humid}%</div>
-            <div class="component wind">${firstResponse[0].currently.windSpeed} mph</div>
+            <div class="component wind">${firstResponse[0].currently.windSpeed} mph ${windDirection()}</div>
             <div class="component rain">${rain}%</div>
             <div class="component uv">${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></div>
             <div class="component aqi">${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></div>
