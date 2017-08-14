@@ -123,42 +123,41 @@ function initAutocomplete() {
               return "Extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
 
-        function windDirection() {
-            if (firstResponse[0].currently.windBearing <= 11.25) {
-            return "N"
-          } else if (firstResponse[0].currently.windBearing <= 33.75) {
-            return "NNE"
-          } else if (firstResponse[0].currently.windBearing <= 56.25) {
-            return "NE"
-          } else if (firstResponse[0].currently.windBearing <= 78.75) {
-            return "ENE"
-          } else if (firstResponse[0].currently.windBearing <= 101.25) {
-            return "E" 
-          } else if (firstResponse[0].currently.windBearing <= 123.75) {
-            return "ESE" 
-          } else if (firstResponse[0].currently.windBearing <= 146.25) {
-            return "SE" 
-          } else if (firstResponse[0].currently.windBearing <= 168.75) {
-            return "SSE"
-          } else if (firstResponse[0].currently.windBearing <= 191.25) {
-            return "S" 
-          } else if (firstResponse[0].currently.windBearing <= 213.75) {
-            return "SSW" 
-          } else if (firstResponse[0].currently.windBearing <= 236.25) {
-            return "SW" 
-          } else if (firstResponse[0].currently.windBearing <= 258.75) {
-            return "WSW" 
-          } else if (firstResponse[0].currently.windBearing <= 281.25) {
-            return "W" 
-          } else if (firstResponse[0].currently.windBearing <= 303.75) {
-            return "WNW" 
-          } else if (firstResponse[0].currently.windBearing <= 326.25) {
-            return "NW" 
-          } else if (firstResponse[0].currently.windBearing <= 348.75) {
-            return "NNW" 
-          } else {
-            return "N"}
-        };
+          function windDirection() {if (firstResponse[0].currently.windBearing <= 11.25) {
+              return "N"
+            } else if (firstResponse[0].currently.windBearing <= 33.75) {
+              return "NNE"
+            } else if (firstResponse[0].currently.windBearing <= 56.25) {
+              return "NE"
+            } else if (firstResponse[0].currently.windBearing <= 78.75) {
+              return "ENE"
+            } else if (firstResponse[0].currently.windBearing <= 101.25) {
+              return "E" 
+            } else if (firstResponse[0].currently.windBearing <= 123.75) {
+              return "ESE" 
+            } else if (firstResponse[0].currently.windBearing <= 146.25) {
+              return "SE" 
+            } else if (firstResponse[0].currently.windBearing <= 168.75) {
+              return "SSE"
+            } else if (firstResponse[0].currently.windBearing <= 191.25) {
+              return "S" 
+            } else if (firstResponse[0].currently.windBearing <= 213.75) {
+              return "SSW" 
+            } else if (firstResponse[0].currently.windBearing <= 236.25) {
+              return "SW" 
+            } else if (firstResponse[0].currently.windBearing <= 258.75) {
+              return "WSW" 
+            } else if (firstResponse[0].currently.windBearing <= 281.25) {
+              return "W" 
+            } else if (firstResponse[0].currently.windBearing <= 303.75) {
+              return "WNW" 
+            } else if (firstResponse[0].currently.windBearing <= 326.25) {
+              return "NW" 
+            } else if (firstResponse[0].currently.windBearing <= 348.75) {
+              return "NNW" 
+            } else {
+              return "N"}
+          };
 
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
           const humid = Math.round(firstResponse[0].currently.humidity*100);
