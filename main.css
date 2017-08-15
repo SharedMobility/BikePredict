@@ -10,6 +10,14 @@ html, body {
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
+body.active {
+  overflow: scroll;
+}
+
 h1 {
   text-align: center;
 }
@@ -21,16 +29,50 @@ h1 {
   height: 100%;
 }
 
-#explanation {
+.explanation {
+  color: white;
   padding-top: 5%;
   font-family: Roboto;
   text-align: center;
+}
+
+.explanation.inactive {
+  display: none;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background 600ms ease-in-out;
+  width: 100%;
+}
+
+.exit {
+  color: white;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 2.5rem;
+  right: 20px;
+  position: absolute;
+  top: 5px;
+}
+
+.overlay.active {
+  background: rgba(0, 0, 0, 0);
+  display: none;
 }
 
 #legend {
   display: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+#legend.active {
+  display: block;
 }
 
 #legend img {

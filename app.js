@@ -13,7 +13,7 @@ function initAutocomplete() {
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -74,7 +74,7 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     $("#explanation").hide();
     $("#api_info").show();
-    $("#legend").show();
+    $("#legend").addClass('active');
 
       var weatherCall =
         $.ajax({
@@ -174,6 +174,11 @@ function initAutocomplete() {
           )
         })
       })
+    $('#t-exit').on("click", function(){
+      $('#t-overlay').toggleClass("active");
+      $('#t-explanation').toggleClass("inactive");
+      $('body').toggleClass("active");
+    })
   })
 }
     
