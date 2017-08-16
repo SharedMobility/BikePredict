@@ -9,7 +9,7 @@ function initAutocomplete() {
 
   var bikeLayer = new google.maps.BicyclingLayer();
   bikeLayer.setMap(map);
-  
+
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
@@ -24,7 +24,7 @@ function initAutocomplete() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener('places_changed', function() {
-    
+
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -96,7 +96,7 @@ function initAutocomplete() {
       });
 
         $.when(weatherCall, aqiCall).done(function (firstResponse, secondResponse) {
-          
+
           function aqiMessage() {if (secondResponse[0].data.aqi <= 50) {
               return "Air quality is considered satisfactory, and air pollution poses little or no risk."
             } else if (secondResponse[0].data.aqi <= 100) {
@@ -104,13 +104,13 @@ function initAutocomplete() {
             } else if (secondResponse[0].data.aqi <= 150) {
               return "Members of sensitive groups may experience health effects. The general public is not likely to be affected."
             } else if (secondResponse[0].data.aqi <= 200) {
-              return "Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."  
+              return "Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."
             } else if (secondResponse[0].data.aqi <= 300) {
-              return "Air quality is dangerous.  Health warnings of emergency conditions. The entire population is more likely to be affected."    
+              return "Air quality is dangerous.  Health warnings of emergency conditions. The entire population is more likely to be affected."
             } else {
               return "Air quality is acutely dangerous.  Health alert: everyone may experience more serious health effects."}
           };
-          
+
           function uviMessage() {if (firstResponse[0].currently.uvIndex <= 2) {
               return "Low danger from the sun's UV rays for the average person."
             } else if (firstResponse[0].currently.uvIndex <= 5) {
@@ -118,7 +118,7 @@ function initAutocomplete() {
             } else if (firstResponse[0].currently.uvIndex <= 7) {
               return "High risk of harm from unprotected sun exposure. Protection against skin and eye damage is needed."
             } else if (firstResponse[0].currently.uvIndex <= 10) {
-              return "Very high risk of harm from unprotected sun exposure. Take extra precautions because unprotected skin and eyes will be damaged and can burn quickly."  
+              return "Very high risk of harm from unprotected sun exposure. Take extra precautions because unprotected skin and eyes will be damaged and can burn quickly."
             } else {
               return "Extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
@@ -132,29 +132,29 @@ function initAutocomplete() {
             } else if (firstResponse[0].currently.windBearing <= 78.75) {
               return "ENE"
             } else if (firstResponse[0].currently.windBearing <= 101.25) {
-              return "E" 
+              return "E"
             } else if (firstResponse[0].currently.windBearing <= 123.75) {
-              return "ESE" 
+              return "ESE"
             } else if (firstResponse[0].currently.windBearing <= 146.25) {
-              return "SE" 
+              return "SE"
             } else if (firstResponse[0].currently.windBearing <= 168.75) {
               return "SSE"
             } else if (firstResponse[0].currently.windBearing <= 191.25) {
-              return "S" 
+              return "S"
             } else if (firstResponse[0].currently.windBearing <= 213.75) {
-              return "SSW" 
+              return "SSW"
             } else if (firstResponse[0].currently.windBearing <= 236.25) {
-              return "SW" 
+              return "SW"
             } else if (firstResponse[0].currently.windBearing <= 258.75) {
-              return "WSW" 
+              return "WSW"
             } else if (firstResponse[0].currently.windBearing <= 281.25) {
-              return "W" 
+              return "W"
             } else if (firstResponse[0].currently.windBearing <= 303.75) {
-              return "WNW" 
+              return "WNW"
             } else if (firstResponse[0].currently.windBearing <= 326.25) {
-              return "NW" 
+              return "NW"
             } else if (firstResponse[0].currently.windBearing <= 348.75) {
-              return "NNW" 
+              return "NNW"
             } else {
               return "N"}
           };
@@ -162,7 +162,7 @@ function initAutocomplete() {
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
           const humid = Math.round(firstResponse[0].currently.humidity*100);
 
-          $('#api_info').html( 
+          $('#api_info').html(
             `
             <div class="component temp">${firstResponse[0].currently.temperature}°F</div>
             <div class="component humidity">${humid}%</div>
@@ -176,4 +176,3 @@ function initAutocomplete() {
       })
   })
 }
-    

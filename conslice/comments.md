@@ -69,3 +69,6 @@ Read Matt West's excellent introductory article on [sectioning elements](http://
 
 ### c020
 The different SASS stylesheets here are based on the [SMACCS styleguide](https://smacss.com/) developed by Jonathan Snook.
+
+### c021
+The class ` .pac-container ` is defined by Google. We hide it so that the user does not see what we feel is an unnecessary drop-down list below the address input as the user enters data.
