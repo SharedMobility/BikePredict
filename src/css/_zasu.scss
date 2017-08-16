@@ -4,16 +4,6 @@
   margin: auto;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  text-align: center;
-}
-
 #description {
   font-family: Roboto;
   font-size: 15px;
@@ -50,48 +40,7 @@ h1 {
   display: inline;
 }
 
-.pac-card {
-  margin: 10px 10px 0 0;
-  border-radius: 2px 0 0 2px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  font-family: Roboto;
-}
 
-#pac-container {
-  padding-bottom: 12px;
-  margin-right: 12px;
-}
-
-.pac-controls {
-  display: inline-block;
-  padding: 5px 11px;
-}
-
-.pac-controls label {
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-#pac-input {
-  background-color: #fff;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
-  text-align: center;
-  text-overflow: ellipsis;
-  width: 210px;
-}
-
-#pac-input:focus {
-  border-color: #4d90fe;
-}
 
 #title {
   color: #fff;
@@ -113,99 +62,9 @@ h1 {
   display: none;
 }
 
-.component {
-  border-radius: 4px;
-  color: white;
-  font-size: 1em;
-  font-family: Roboto;
-  margin: 40px auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  position: relative;
-  text-align: center;
-  box-sizing: border-box;
-  width: 80%;
-}
 
-.component:before {
-  width: 100%;
-  color: black;
-  font-size: 1em;
-  left: 0;
-  position: absolute;
-  top: -20px;
-  font-family: Roboto;
-}
 
-.temp {
-  background:#EBB5FF;
-  border: 1px solid #EBB5FF;
-}
 
-.temp:before {
-    content: 'Temperature';
-}
-
-.humidity {
-  background: #3AFFA9;
-  border: 1px solid #3AFFA9;
-}
-
-.humidity:before {
-  content: 'Humidity';
-}
-
-.aqi {
-  background: #36E8E4;
-  border: 1px solid #36E8E4;
-}
-
-.aqi:before {
-  content: 'Aqi';
-}
-
-.uv {
-  background: #4E32FF;
-  border: 1px solid #4E32FF;
-}
-
-.uv:before {
-  content: 'UV Index';
-}
-
-.wind {
-  background: #3AB7FF;
-  border: 1px solid #3AB7FF;
-}
-
-.wind:before {
-  content: 'Wind Speed';
-}
-
-.rain {
-  background: #6485E8;
-  border: 1px solid #6485E8;
-}
-
-.rain:before {
-  content: 'Chance of Rain';
-}
-
-.aqimessage {
-  padding-top: 5px;
-  color: white;
-  font-family: Roboto;
-  font-size: 11px;
-}
-
-.uvmessage {
-  padding-top: 5px;
-  color: white;
-  font-family: Roboto;
-  font-size: 11px;
-}
 
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
@@ -217,42 +76,4 @@ a[href^="https://www.google.com/maps"] {
 }
 .gm-bundled-control .gmnoprint {
     display: block;
-}
-
-@media only screen and (min-width: 620px) {
-  #api_info {
-    padding: 50px;
-  }
-  .component {
-    font-size: 1.5em;
-    float: left;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 46%;
-  }
-  .component:before {
-    padding-top: 15px;
-    top: -55px;
-  }
-
-  .aqimessage, .uvmessage {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (min-width: 920px) {
-  #api_info {
-    padding: 75px;
-  }
-  .component {
-    font-size: 2em;
-    width: 29.25%;
-  }
-  .component:before {
-    padding-top: 150px;
-    top: -200px;
-  }
-  .aqimessage, .uvmessage {
-    font-size: 17px;
-  }
 }

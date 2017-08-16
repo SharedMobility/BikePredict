@@ -3,11 +3,7 @@
   var app = {
 
     init: function() {
-      app.test();
-    },
 
-    test: function() {
-      alert('heythere');
     }
 
   };
