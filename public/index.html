@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bike Predict</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Know before you go. Check air quality and other weather conditions with Bike Predict to get the most out of your ride." />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Bike Predict</h1>
+    <input id="pac-input" class="controls" type="text" placeholder="Type in a city or zip code to begin">
+    <div id='map'></div>
+    <div id="legend"><img src="legend.png"></div>
+    <div id='explanation'>Bike Predict gives bike path, air quality, and weather information about specified locations.</div>
+    <div id='api_info'></div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" async defer></script>
+    <script type="text/javascript" src="src/js/googlemaps.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="src/js/sizer.js"></script>
+  </body>
+</html>

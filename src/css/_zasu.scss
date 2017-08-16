@@ -1,0 +1,79 @@
+#map {
+  height: 40%;
+  width: 90%;
+  margin: auto;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 100%;
+}
+
+#explanation {
+  padding-top: 5%;
+  font-family: Roboto;
+  text-align: center;
+}
+
+#legend {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#legend img {
+  display: block;
+  margin: auto;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
+
+#api_info {
+  padding: 10px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  display: none;
+}
+
+
+
+
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
