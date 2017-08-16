@@ -1,4 +1,4 @@
-## Comments for Cox Media Group Challenge Submissions
+## Comments for [*put the tile of your project here*]
 
 ### c001
 The source for this reset has long since been lost but in its own comments, it cites inspiration from those listed below. We have since made own modifications to it but it is largely intact as it was when we first started implementing it.
@@ -50,13 +50,13 @@ The default font family is Arial but you should customize this as needed.
 + $font3 – accents
 
 ### c014
-Responsive breakpoints are provided but will likely be unnecessary if we use Bootstrap.
+Responsive breakpoints are provided but will likely be unnecessary if you use Bootstrap.
 
 ### c015
 This is simply to mark a Twitter Bootstrap breakpoint.
 
 ### c016
-The file *zasu.scss* is the digital equivalent of scratch paper. We use this file to test styles that may or may not be ultimately implemented. It should be empty when we deploy.
+The file *zasu.scss* is the digital equivalent of scratch paper. We use this file to test styles that may or may not be ultimately implemented. It should be empty when you deploy.
 
 ### c017
 Six ` font-size ` variables are provided to get started (e.g. *biggest, bigger, big, base, small, smaller, and smallest*) but you should modify their values as needed.
