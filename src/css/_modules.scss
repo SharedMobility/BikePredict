@@ -152,3 +152,24 @@
     font-size: 17px;
   }
 }
+
+.exit {
+  color: white;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 2.5rem;
+  right: 20px;
+  position: absolute;
+  top: 5px;
+}
+
+.explanation {
+  color: white;
+  padding-top: 5%;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.explanation.inactive {
+  display: none;
+}
