@@ -13,7 +13,7 @@ function initAutocomplete() {
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -164,12 +164,12 @@ function initAutocomplete() {
 
           $('#api_info').html(
             `
-            <div class="component temp">${firstResponse[0].currently.temperature}°F</div>
-            <div class="component humidity">${humid}%</div>
-            <div class="component wind">${firstResponse[0].currently.windSpeed} mph ${windDirection()}</div>
-            <div class="component rain">${rain}%</div>
-            <div class="component uv">${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></div>
-            <div class="component aqi">${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></div>
+            <div class="component temp"><span>${firstResponse[0].currently.temperature}°F</span></div>
+            <div class="component humidity"><span>${humid}%</span></div>
+            <div class="component wind"><span>${firstResponse[0].currently.windSpeed} mph ${windDirection()}</span></div>
+            <div class="component rain"><span>${rain}%</span></div>
+            <div class="component uv"><span>${firstResponse[0].currently.uvIndex}</span><div class="uvmessage">${uviMessage()}</div></div>
+            <div class="component aqi"><span>${secondResponse[0].data.aqi}</span><div class="aqimessage">${aqiMessage()}</div></div>
             `
           )
         })
