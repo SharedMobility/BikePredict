@@ -19,6 +19,15 @@
 //----------------------------------------------------------------------------
 //  MAIN
 //----------------------------------------------------------------------------
+#api_info {
+  height: 100px;
+  padding: 10px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  display: none;
+}
+
 .component {
   border-radius: 4px;
   color: white;
@@ -44,7 +53,6 @@
   top: -20px;
   font-family: Roboto;
 }
-
 
 .temp {
   background:#EBB5FF;
@@ -138,6 +146,7 @@
 
 @media only screen and (min-width: 920px) {
   #api_info {
+    margin-top: 450px;
     padding: 75px;
   }
   .component {
