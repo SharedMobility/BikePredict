@@ -12,6 +12,9 @@ a {
 body {
   overflow: hidden;
   height: 100%;
+  font-family: "Enriqueta";
+  font-weight: normal;
+  font-style: normal;
 }
 
 body.active {
@@ -26,10 +29,15 @@ body.active {
 h1 {
   text-align: center;
   font-size: 30px;
+  font-family: "Crimson Text";
+  font-weight: 600;
+  font-style: normal;
 }
 
 h2 {
-
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
 }
 
 h3 {
