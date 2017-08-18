@@ -24,16 +24,17 @@
   padding: 10px;
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin: 50px auto;
   display: none;
 }
 
 .component {
+  background: crimson;
   border-radius: 4px;
   color: white;
   font-size: 1em;
   font-family: Roboto;
-  padding: 40px 5px;
+  padding: 50px 5px;
   position: relative;
   text-align: center;
   box-sizing: border-box;
@@ -46,12 +47,14 @@
   font-size: 1em;
   left: 0;
   position: absolute;
-  top: -20px;
+  top: -40px;
   font-family: Roboto;
 }
 
+
 .temp {
   background:#EBB5FF;
+  border: 1px solid #EBB5FF;
 }
 
 .temp:before {
@@ -60,6 +63,7 @@
 
 .humidity {
   background: #3AFFA9;
+  border: 1px solid #3AFFA9;
 }
 
 .humidity:before {
@@ -68,6 +72,7 @@
 
 .aqi {
   background: #36E8E4;
+  border: 1px solid #36E8E4;
 }
 
 .aqi:before {
@@ -76,6 +81,7 @@
 
 .uv {
   background: #4E32FF;
+  border: 1px solid #4E32FF;
 }
 
 .uv:before {
@@ -84,6 +90,7 @@
 
 .wind {
   background: #3AB7FF;
+  border: 1px solid #3AB7FF;
 }
 
 .wind:before {
@@ -92,6 +99,7 @@
 
 .rain {
   background: #6485E8;
+  border: 1px solid #6485E8;
 }
 
 .rain:before {
@@ -111,7 +119,6 @@
   font-family: Roboto;
   font-size: 11px;
 }
-
 
 @media only screen and (min-width: 620px) {
   #api_info {
@@ -140,25 +147,4 @@
   .aqimessage, .uvmessage {
     font-size: 17px;
   }
-}
-
-.exit {
-  color: white;
-  cursor: pointer;
-  font-family: arial;
-  font-size: 2.5rem;
-  right: 20px;
-  position: absolute;
-  top: 5px;
-}
-
-.explanation {
-  color: white;
-  padding-top: 5%;
-  font-family: Roboto;
-  text-align: center;
-}
-
-.explanation.inactive {
-  display: none;
 }

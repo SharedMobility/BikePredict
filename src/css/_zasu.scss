@@ -2,27 +2,13 @@
   height: 45%;
   width: 90%;
   margin: auto;
+  margin-bottom: 30px;
 }
 
 #explanation {
   padding-top: 5%;
   font-family: Roboto;
   text-align: center;
-}
-
-#legend {
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#legend.active {
-  display: block;
-}
-
-#legend img {
-  display: block;
-  margin: auto;
 }
 
 #infowindow-content .title {
@@ -59,4 +45,61 @@ a[href^="https://www.google.com/maps"] {
 }
 .gm-bundled-control .gmnoprint {
     display: block;
+}
+
+.legends {
+  background: white;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.legend {
+  float: left;
+  width: 50%;
+}
+
+.legend div {
+  position: relative;
+  left: 20px;
+}
+
+.legend div:before {
+  content: '';
+  left: -30px;
+  position: absolute;
+  top: 40%;
+  width: 20px;
+}
+
+.cf:after,
+.cf:before {
+  content: '';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.trails:before {
+  border: 2px solid #004c00;
+}
+
+.lanes:before {
+  border: 2px solid #028903;
+}
+
+.friendly:before {
+  border: 2px dashed #028903;
+}
+
+.dirt:before {
+  border: 2px solid #996633;
+}
+@media only screen and (min-width: 620px) {
+
+}
+
+@media only screen and (min-width: 920px) {
+
 }
