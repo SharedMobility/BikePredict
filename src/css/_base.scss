@@ -10,17 +10,22 @@ a {
 //  Body
 //----------------------------------------------------------------------------
 body {
-  overflow: hidden;
   height: 100%;
   font-family: "Enriqueta";
   font-weight: normal;
   font-style: normal;
 }
 
-body.active {
-  overflow: scroll;
-}
+// @media only screen and (min-width: 620px) {
 
+//   body {
+//     overflow: hidden;
+//   }
+//   body.active {
+//     overflow: scroll;
+//   }
+// }
+  
 
 //----------------------------------------------------------------------------
 //  Headings

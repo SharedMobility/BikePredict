@@ -50,7 +50,7 @@ a[href^="https://www.google.com/maps"] {
 .legends {
   background: white;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .legend {
@@ -60,7 +60,9 @@ a[href^="https://www.google.com/maps"] {
 
 .legend div {
   position: relative;
-  left: 20px;
+  left: 25px;
+  font-family: "Enriqueta";
+  font-size: 10px;
 }
 
 .legend div:before {
@@ -96,10 +98,25 @@ a[href^="https://www.google.com/maps"] {
 .dirt:before {
   border: 2px solid #996633;
 }
+
 @media only screen and (min-width: 620px) {
-
+  .legends {
+    max-width: 280px;
+  }
+  
+  .legend div {
+    left: 20px;
+    font-size: 15px;
+  }
+  
+  .legend div:before {
+    left: -30px;
+  }
 }
 
-@media only screen and (min-width: 920px) {
-
-}
+// @media only screen and (min-width: 920px) {
+//   .legend div {
+//     left: 40px;
+//     font-size: 10px;
+//   }
+// }

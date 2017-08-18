@@ -24,7 +24,7 @@
   padding: 10px;
   position: relative;
   display: block;
-  margin: 50px auto;
+  margin: 10px auto;
   display: none;
 }
 
@@ -33,22 +33,25 @@
   border-radius: 4px;
   color: white;
   font-size: 1em;
-  font-family: Roboto;
-  padding: 50px 5px;
+  font-family: "Enriqueta";
+  margin: 20px auto;
+  padding: 50px 10px;
   position: relative;
   text-align: center;
   box-sizing: border-box;
-  width: 80%;
+  width: 95%;
 }
 
 .component:before {
   width: 100%;
-  color: black;
+  color: darkblue;
   font-size: 1em;
   left: 0;
   position: absolute;
-  top: -40px;
-  font-family: Roboto;
+  top: 1%;
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
 }
 
 
@@ -122,7 +125,7 @@
 
 @media only screen and (min-width: 620px) {
   #api_info {
-    padding: 50px;
+    padding: 20px;
   }
   .component {
     font-size: 1.5em;
@@ -134,17 +137,22 @@
   .aqimessage, .uvmessage {
     font-size: 14px;
   }
+  .uv, .aqi, {
+    height: 150px;
+  }
 }
 
 @media only screen and (min-width: 920px) {
-  #api_info {
-    padding: 75px;
-  }
+  
   .component {
+    margin-left: 3%;
     font-size: 2em;
-    width: 29.25%;
+    width: 28%;
   }
   .aqimessage, .uvmessage {
     font-size: 17px;
+  }
+  .rain, .uv, .aqi, {
+    height: 200px;
   }
 }
