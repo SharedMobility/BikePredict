@@ -32,7 +32,7 @@
   background: crimson;
   border-radius: 4px;
   color: white;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Enriqueta";
   margin: 20px auto;
   padding: 50px 10px;
@@ -45,7 +45,7 @@
 .component:before {
   width: 100%;
   color: darkblue;
-  font-size: 1em;
+  font-size: 1.5em;
   left: 0;
   position: absolute;
   top: 1%;
@@ -112,15 +112,38 @@
 .aqimessage {
   padding-top: 5px;
   color: white;
-  font-family: Roboto;
-  font-size: 11px;
+  font-family: "Enriqueta";
+  font-size: 15px;
 }
 
 .uvmessage {
   padding-top: 5px;
   color: white;
-  font-family: Roboto;
-  font-size: 11px;
+  font-family: "Enriqueta";
+  font-size: 15px;
+}
+
+.exit {
+  color: white;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 2.5rem;
+  right: 20px;
+  position: absolute;
+  top: 5px;
+}
+
+.explanation {
+  color: white;
+  padding-top: 5%;
+  position: relative;
+  top: 35%;
+  font-family: "IM Fell English";
+  text-align: center;
+}
+
+.explanation.inactive {
+  display: none;
 }
 
 @media only screen and (min-width: 620px) {
@@ -135,10 +158,10 @@
     width: 46%;
   }
   .aqimessage, .uvmessage {
-    font-size: 14px;
+    font-size: 20px;
   }
   .uv, .aqi, {
-    height: 150px;
+    height: 250px;
   }
 }
 
@@ -146,11 +169,10 @@
   
   .component {
     margin-left: 3%;
-    font-size: 2em;
     width: 28%;
   }
   .aqimessage, .uvmessage {
-    font-size: 17px;
+    font-size: 18px;
   }
   .rain, .uv, .aqi, {
     height: 200px;
