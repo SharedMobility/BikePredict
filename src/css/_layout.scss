@@ -4,17 +4,3 @@
 .y-wrap {
 
 }
-  .overlay {
-    background: rgba(0, 0, 0, .7);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transition: background 600ms ease-in-out;
-    width: 100%;
-  }
-  
-  .overlay.active {
-    background: rgba(0, 0, 0, 0);
-    display: none;
-  }

@@ -1,14 +1,9 @@
 #map {
+  display: none;
   height: 45%;
   width: 90%;
   margin: auto;
   margin-bottom: 30px;
-}
-
-#explanation {
-  padding-top: 5%;
-  font-family: Roboto;
-  text-align: center;
 }
 
 #infowindow-content .title {
@@ -49,7 +44,9 @@ a[href^="https://www.google.com/maps"] {
 
 .legends {
   background: white;
+  display: none;
   margin: 0 auto;
+  padding-bottom: 20px;
   max-width: 200px;
 }
 

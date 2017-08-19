@@ -13,7 +13,6 @@ function initAutocomplete() {
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -23,8 +22,10 @@ function initAutocomplete() {
   var markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
-  searchBox.addListener('places_changed', function() {
 
+  $("#map").show();
+  
+  searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -72,9 +73,11 @@ function initAutocomplete() {
 
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
-    $("#explanation").hide();
+    
     $("#api_info").show();
-    $("#legend").addClass('active');
+    $(".legends").show();
+    $('#pac-input').addClass("none");
+
 
       var weatherCall =
         $.ajax({

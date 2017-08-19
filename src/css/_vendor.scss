@@ -31,10 +31,11 @@
 
 #pac-input {
   background-color: #fff;
+  display: block;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 300;
-  margin-left: 12px;
+  margin: 0 auto;
   padding: 0 11px 0 13px;
   text-align: center;
   text-overflow: ellipsis;
