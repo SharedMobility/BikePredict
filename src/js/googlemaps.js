@@ -4,11 +4,8 @@ function initAutocomplete() {
     center: {lat: 37, lng: -95},
     zoom: 4,
     disableDefaultUI: true,
-    mapTypeId: 'terrain'
+    mapTypeId: 'terrain',
   });
-
-  var bikeLayer = new google.maps.BicyclingLayer();
-  bikeLayer.setMap(map);
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -18,14 +15,13 @@ function initAutocomplete() {
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
   });
-
+  
   var markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
-
-  $("#map").show();
-  
   searchBox.addListener('places_changed', function() {
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -76,8 +72,7 @@ function initAutocomplete() {
     
     $("#api_info").show();
     $(".legends").show();
-    $('#pac-input').addClass("none");
-
+    $('#pac-input').hide();
 
       var weatherCall =
         $.ajax({
@@ -177,10 +172,5 @@ function initAutocomplete() {
           )
         })
       })
-    $('#t-exit').on("click", function(){
-      $('#t-overlay').toggleClass("active");
-      $('#t-explanation').toggleClass("inactive");
-      $('body').toggleClass("active");
-    })
   })
 }

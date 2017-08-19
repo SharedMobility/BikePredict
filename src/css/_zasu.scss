@@ -1,9 +1,12 @@
 #map {
-  display: none;
   height: 45%;
   width: 90%;
   margin: auto;
   margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
 }
 
 #infowindow-content .title {
