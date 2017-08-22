@@ -71,6 +71,8 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     
     $("#api_info").show();
+    $("#map").removeClass('hidden');
+    google.maps.event.trigger(map, 'resize');
     $(".legends").show();
     $('#pac-input').hide();
 
