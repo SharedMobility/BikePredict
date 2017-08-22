@@ -74,7 +74,7 @@ function initAutocomplete() {
     $("#map").removeClass('hidden');
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
-    $('#pac-input').hide();
+    $('.header').hide();
 
       var weatherCall =
         $.ajax({
