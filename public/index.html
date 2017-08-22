@@ -10,21 +10,25 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600-IM+Fell+English:italic-Enriqueta:regular" rel="stylesheet">
   </head>
   <body>
-    <h1>Bike Predict</h1>
-    <div id='map' class='hidden'></div>
-    <div class="legends cf">
-      <div class="legend">
-        <div class="trails">Trails</div>
-        <div class="lanes">Dedicated lanes</div>
+      <div class="header">
+        <h1>Bike Predict</h1>
+        <p>Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
+        <input id="pac-input" class="controls" type="text" placeholder="Search location">
       </div>
-      <div class="legend">
-        <div class="friendly">Bicycle-friendly roads</div>
-        <div class="dirt">Dirt/unpaved trails</div>
+      <div id='map' class='hidden'></div>
+      <div class="legends cf">
+        <div class="legend">
+          <div class="trails">Trails</div>
+          <div class="lanes">Dedicated lanes</div>
+        </div>
+        <div class="legend">
+          <div class="friendly">Bicycle-friendly roads</div>
+          <div class="dirt">Dirt/unpaved trails</div>
+        </div>
       </div>
-    </div>
-    <input id="pac-input" class="controls" type="text" placeholder="Type in street name to see if there are bike trails">
-    <div id='api_info'></div>
-    </div>   
+      <div id='api_info'></div>
+      </div>
+    <div class='bg'></div>   
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>
     <script type="text/javascript" src="src/js/googlemaps.js"></script>

@@ -1,6 +1,29 @@
 //----------------------------------------------------------------------------
 //  WRAPS
 //----------------------------------------------------------------------------
-.y-wrap {
+// .y-wrap {
+//     margin: 0 auto;
+//     position: relative;
+//     width: 90;
+// }
 
-}
+.bg {
+    background-image: url('../src/img/bike-background.jpg');
+    background-position: center center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    &:after {
+        background: rgba(0, 0, 0, 0.6);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -5;
+    }
+  }

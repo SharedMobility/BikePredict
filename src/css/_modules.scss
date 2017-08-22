@@ -14,6 +14,31 @@
 //  HEADER
 //----------------------------------------------------------------------------
 
+.header {
+  color: rgba(255, 255, 255, 1);
+  left: 50%;
+  max-width: 260px;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  &:after {
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 120%;
+    left: -10%;
+    position: absolute;
+    top: -10%;
+    width: 120%;
+    z-index: -1;
+  }
+}
+
+p {
+  .header & {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 
 //----------------------------------------------------------------------------
@@ -53,7 +78,6 @@
   font-weight: normal;
   font-style: oblique;
 }
-
 
 .temp {
   background:#1D5B7F;
