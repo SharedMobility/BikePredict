@@ -19,9 +19,19 @@ function initAutocomplete() {
   var markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
+
+  document.getElementById('pac-submit').onclick = function () {
+    var input = document.getElementById('pac-input');
+
+    google.maps.event.trigger(input, 'focus')
+    google.maps.event.trigger(input, 'keydown', { keyCode: 13 });
+  };
+
   searchBox.addListener('places_changed', function() {
+    
     var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
+
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -71,6 +81,7 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     
     $("#api_info").show();
+    $("#map-title").removeClass('hidden');
     $("#map").removeClass('hidden');
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
