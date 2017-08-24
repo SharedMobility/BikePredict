@@ -72,3 +72,6 @@ The different SASS stylesheets here are based on the [SMACCS styleguide](https:/
 
 ### c021
 The class ` .pac-container ` is defined by Google. We hide it so that the user does not see what we feel is an unnecessary drop-down list below the address input as the user enters data.
+
+### c022
+Uses fixed width.  If font-size changes, can break code. 

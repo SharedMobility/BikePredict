@@ -81,11 +81,15 @@ function initAutocomplete() {
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
     
     $("#api_info").show();
-    $("#map-title").removeClass('hidden');
+    $("#t-map-title").removeClass('hidden');
     $("#map").removeClass('hidden');
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
     $('.header').hide();
+    $('.bg').hide();
+    $('#t-back').on("click", function(){
+      location.reload();
+    });
 
       var weatherCall =
         $.ajax({

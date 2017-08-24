@@ -1,11 +1,17 @@
-//----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  WRAPS
-//----------------------------------------------------------------------------
-// .y-wrap {
-//     margin: 0 auto;
-//     position: relative;
-//     width: 90;
-// }
+// ----------------------------------------------------------------------------
+.y-wrap {
+    margin: 0 auto;
+    position: static;
+    width: 92%;
+}
+
+.y-legend {
+    background: yellow;
+    margin: 0 auto;
+    width: 210px;  //c022
+}
 
 .bg {
     background-image: url('../src/img/bike-background.jpg');
@@ -16,14 +22,14 @@
     top: 0;
     width: 100%;
     z-index: -10;
-    &:after {
-        background: rgba(0, 0, 0, 0.6);
-        content: "";
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -5;
-    }
+    // &:after {
+    //     background: rgba(0, 0, 0, 0.6);
+    //     content: "";
+    //     height: 100%;
+    //     left: 0;
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: -5;
+    // }
   }

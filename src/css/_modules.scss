@@ -214,3 +214,22 @@ p {
     background: rgba(150, 150, 150, 1);
   }
 }
+
+.map-title {
+  background: rgb(29, 91, 127);
+  color: white;
+  padding: 8px 10px;
+}
+
+.nimg {
+  border: 1px solid crimson;
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.nback {
+  display: inline;
+  vertical-align: center;
+}

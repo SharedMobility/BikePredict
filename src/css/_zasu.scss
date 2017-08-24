@@ -1,8 +1,8 @@
 #map {
   height: 50%;
-  width: 100%;
-  margin: auto 0;
-  margin-bottom: 30px;
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 .hidden {
@@ -46,41 +46,47 @@ a[href^="https://www.google.com/maps"] {
 }
 
 .legends {
-  background: white;
+  background: #f5f5dc;
   display: none;
   margin: 0 auto;
   padding-bottom: 20px;
 }
 
 .legend {
-  float: left;
-  width: 50%;
+  // float: left;
+  // width: 100%;
 }
 
-.legend div {
-  position: relative;
-  left: 25px;
-  font-family: "Enriqueta";
-  font-size: 10px;
+div {
+  .legend & {
+    position: relative;
+    left: 30px;
+    font-family: "Enriqueta";
+    font-size: 20px;
+    &:before {
+      content: '';
+      left: -30px;
+      position: absolute;
+      top: 40%;
+      width: 20px;
+    }
+  }
 }
+// .legend div {
+//   position: relative;
+//   left: 25px;
+//   font-family: "Enriqueta";
+//   font-size: 10px;
+// }
 
-.legend div:before {
-  content: '';
-  left: -30px;
-  position: absolute;
-  top: 40%;
-  width: 20px;
-}
+// .legend div:before {
+//   content: '';
+//   left: -30px;
+//   position: absolute;
+//   top: 40%;
+//   width: 20px;
+// }
 
-.cf:after,
-.cf:before {
-  content: '';
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
 
 .trails:before {
   border: 2px solid #004c00;
