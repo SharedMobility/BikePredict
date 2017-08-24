@@ -19,7 +19,8 @@
   left: 50%;
   max-width: 260px;
   position: absolute;
-  top: 20%;
+  text-align: center;
+  top: 26%;
   transform: translate(-50%, -50%);
   &:after {
     background: rgba(0, 0, 0, 0.3);
@@ -200,5 +201,16 @@ p {
   }
   .rain, .uv, .aqi, {
     height: 200px;
+  }
+}
+
+.pac-submit {
+  background: rgba(200, 200, 200, 1);
+  border: none;
+  margin-top: 24px;
+  padding: 6px 16px;
+  transition: all 600ms ease-in-out; 
+  &:hover {
+    background: rgba(150, 150, 150, 1);
   }
 }

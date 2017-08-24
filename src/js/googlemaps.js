@@ -20,7 +20,7 @@ function initAutocomplete() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
 
-  document.getElementById('pac-submit').onclick = function () {
+  document.getElementById('t-pac-submit').onclick = function () {
     var input = document.getElementById('pac-input');
 
     google.maps.event.trigger(input, 'focus')
