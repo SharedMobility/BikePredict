@@ -10,7 +10,7 @@ function initAutocomplete() {
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-
+  
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
@@ -85,11 +85,11 @@ function initAutocomplete() {
     $("#map").removeClass('hidden');
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
-    $('.header').hide();
+    $('.will-hide').hide();
     $('.bg').hide();
-    $('#t-back').on("click", function(){
-      location.reload();
-    });
+    // $('#t-back').on("click", function(){
+    //   location.reload();
+    // });
 
       var weatherCall =
         $.ajax({
@@ -176,12 +176,14 @@ function initAutocomplete() {
 
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
           const humid = Math.round(firstResponse[0].currently.humidity*100);
+          const temp = Math.round(Number(firstResponse[0].currently.temperature));
+          const wind = Math.round(firstResponse[0].currently.windSpeed);
 
           $('#api_info').html(
             `
-            <div class="component temp"><span>${firstResponse[0].currently.temperature}°F</span></div>
+            <div class="component temp"><span>${temp}°F</span></div>
             <div class="component humidity"><span>${humid}%</span></div>
-            <div class="component wind"><span>${firstResponse[0].currently.windSpeed} mph ${windDirection()}</span></div>
+            <div class="component wind"><span>${wind} mph ${windDirection()}</span></div>
             <div class="component rain"><span>${rain}%</span></div>
             <div class="component uv"><span>${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></span></div>
             <div class="component aqi"><span>${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></span></div>

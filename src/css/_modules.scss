@@ -17,11 +17,17 @@
 .header {
   color: rgba(255, 255, 255, 1);
   left: 50%;
-  max-width: 260px;
+  width: 260px;
   position: absolute;
   text-align: center;
   top: 26%;
   transform: translate(-50%, -50%);
+  @include responsive(coolidge) {
+    width: 400px;
+  }
+  @include responsive(nixon) {
+    width: 650px;
+  }
   &:after {
     background: rgba(0, 0, 0, 0.3);
     content: "";
