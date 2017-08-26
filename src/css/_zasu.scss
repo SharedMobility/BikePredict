@@ -105,16 +105,10 @@ div {
     font-family: "Enriqueta";
     font-size: 20px;
     padding-left: 16px;
-    @include responsive(harding) {
-      diplay: inline-block;
-      width: calc(50% - 4px);
-    }
     @include responsive(nixon) {
       display: inline-block;
-      border: 1px crimson solid;
       left: 0;
       padding: 0 32px;
-      // width: calc(50% - 4px);
       width: auto;
     };
     &:before {
@@ -129,21 +123,6 @@ div {
     }
   }
 }
-// .legend div {
-//   position: relative;
-//   left: 25px;
-//   font-family: "Enriqueta";
-//   font-size: 10px;
-// }
-
-// .legend div:before {
-//   content: '';
-//   left: -30px;
-//   position: absolute;
-//   top: 40%;
-//   width: 20px;
-// }
-
 
 .trails:before {
   border: 2px solid #004c00;
@@ -160,25 +139,3 @@ div {
 .dirt:before {
   border: 2px solid #996633;
 }
-
-// @media only screen and (min-width: 620px) {
-//   .legends {
-//     max-width: 280px;
-//   }
-  
-//   .legend div {
-//     left: 20px;
-//     font-size: 15px;
-//   }
-  
-//   .legend div:before {
-//     left: -30px;
-//   }
-// }
-
-// @media only screen and (min-width: 920px) {
-//   .legend div {
-//     left: 40px;
-//     font-size: 10px;
-//   }
-// }

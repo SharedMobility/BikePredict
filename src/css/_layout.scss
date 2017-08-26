@@ -5,19 +5,16 @@
     margin: 0 auto;
     position: static;
     width: 92%;
+    &.in-nav {
+        position: relative;
+    }
 }
 
 .y-legend {
-    background: orange;
     display: inline-block;
     text-align: left;
     margin: 0 auto;
     // width: 210px;  //c022
-    @include responsive(harding) {
-        display: block;
-        padding: 8px 0;
-        width: 100%;
-    }
     @include responsive(nixon) {
         // text-align: center;
         width: 100%;

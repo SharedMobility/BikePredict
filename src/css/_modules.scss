@@ -32,8 +32,9 @@
     background: rgba(0, 0, 0, 0.3);
     content: "";
     height: 120%;
-    left: -10%;
+    // left: -10%;
     position: absolute;
+    left: -10%;
     top: -10%;
     width: 120%;
     z-index: -1;
@@ -41,6 +42,7 @@
   &.in-nav {
     overflow: hidden;
     right: 0;
+    text-align: left;
     top: -20px;
     transform: translate(0, 0);
     @include responsive(coolidge) {
@@ -51,6 +53,8 @@
     }
     &:after {
       background: none;
+      width: 100%;
+      right: 0;
     }
   }
 }
@@ -225,30 +229,22 @@ p {
   }
 }
 
-.pac-submit {
-  background: rgba(200, 200, 200, 1);
-  border: none;
-  margin-top: 24px;
-  padding: 6px 16px;
-  transition: all 600ms ease-in-out;
-  &:hover {
-    background: rgba(150, 150, 150, 1);
-  }
-}
-
 .map-title {
   background: rgb(29, 91, 127);
   color: white;
-  padding: 8px 10px;
+  padding: 16px 10px;
 }
 
-.nimg {
-  border: 1px solid crimson;
-  display: inline-block;
-  margin-left: 12px;
-  vertical-align: middle;
-  width: 50px;
-}
+// .nimg {
+//   border: 1px solid crimson;
+//   display: none;
+//   margin-left: 12px;
+//   vertical-align: middle;
+//   width: 50px;
+//   @include responsive(harding) {
+//     display: inline-block;
+//   }
+// }
 
 .nback {
   display: inline;
