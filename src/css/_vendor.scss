@@ -31,28 +31,27 @@
 
 #pac-input {
   background-color: #fff;
+  border: none;
+  display: block;
   font-family: Roboto;
-  font-size: 14px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 30px auto 0;
+  outline: none;
+  padding: 12px;
   text-align: center;
   text-overflow: ellipsis;
-  width: 200px;
+  width: 260px;
 }
 
-#pac-input:focus {
-  border-color: #4d90fe;
-}
+// @media only screen and (min-width: 620px) {
+//   #pac-input {
+//     width: 300px;
+//   }
+// }
 
-@media only screen and (min-width: 620px) {
-  #pac-input {
-    width: 300px;
-  }
-}
-
-@media only screen and (min-width: 920px) {
-  #pac-input {
-    width: 400px;
-  }
-}
+// @media only screen and (min-width: 920px) {
+//   #pac-input {
+//     width: 400px;
+//   }
+// }
