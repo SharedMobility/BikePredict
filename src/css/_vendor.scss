@@ -42,6 +42,13 @@
   text-align: center;
   text-overflow: ellipsis;
   width: 260px;
+  .in-nav & {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 1.0rem;
+    padding: 4px;
+    width: 160px;
+  }
 }
 
 // @media only screen and (min-width: 620px) {
