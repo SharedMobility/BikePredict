@@ -20,21 +20,21 @@ function initAutocomplete() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   var searchCount = 0;  //c023
+  var input = document.getElementById('pac-input');
+  var header = document.getElementById('t-header');
   document.getElementById('t-pac-submit').onclick = function () {
-    var input = document.getElementById('pac-input');
     searchCount += 1;  //c023
     if(searchCount === 1) {
-      input.className += ' in-nav';
+      header.className += ' in-nav';
     }
     google.maps.event.trigger(input, 'focus')
     google.maps.event.trigger(input, 'keydown', { keyCode: 13 });
   };
 
   searchBox.addListener('places_changed', function() {
-    var input = document.getElementById('pac-input');
     searchCount += 1;  //c023
     if(searchCount === 1) {
-      input.className += ' in-nav';
+      header.className += ' in-nav';
     }
 
     var bikeLayer = new google.maps.BicyclingLayer();

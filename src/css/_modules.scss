@@ -16,8 +16,9 @@
 
 .header {
   color: rgba(255, 255, 255, 1);
-  left: 50%;
+  right: 50%;
   width: 260px;
+  overflow: hidden;
   position: absolute;
   text-align: center;
   top: 26%;
@@ -37,6 +38,20 @@
     top: -10%;
     width: 120%;
     z-index: -1;
+  }
+  &.in-nav {
+    right: 0;
+    top: -20px;
+    transform: translate(0, 0);
+    @include responsive(coolidge) {
+      width: 260px;
+    }
+    @include responsive(nixon) {
+      width: 260px;
+    }
+    &:after {
+      background: none;
+    }
   }
 }
 
@@ -197,7 +212,7 @@ p {
 }
 
 @media only screen and (min-width: 920px) {
-  
+
   .component {
     margin-left: 3%;
     width: 28%;
@@ -215,7 +230,7 @@ p {
   border: none;
   margin-top: 24px;
   padding: 6px 16px;
-  transition: all 600ms ease-in-out; 
+  transition: all 600ms ease-in-out;
   &:hover {
     background: rgba(150, 150, 150, 1);
   }
