@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bike Predict</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Know before you go. Check air quality and other weather conditions with Bike Predict to get the most out of your ride." />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600-IM+Fell+English:italic-Enriqueta:regular" rel="stylesheet">
+  </head>
+  <body>
+    <div class="y-wrap">
+      <div class="header">
+        <h1 class="will-hide">Bike Predict</h1>
+        <p class="will-hide">Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
+        <input id="pac-input" class="controls" type="text" placeholder="Search location">
+        <button id="t-pac-submit" class="pac-submit" type='submit'>Search</button>
+      </div>
+      <div id="t-map-title" class='hidden map-title'>
+        <h3>Bike Predict</h3>
+        <div class="nimg"><img src="../src/img/bike_icon1.png"/></div>
+        <!-- <div class="nback"><button id="t-back" class="back">Search Again</button></div> -->
+      </div>
+    </div>
+    <div id='map' class='hidden'></div>
+    <div class="y-wrap">  
+      <div class="legends">
+          <div class="y-legend cf">
+            <!-- <div class="legend"> -->
+              <div class="trails">Trails</div>
+              <div class="lanes">Dedicated lanes</div>
+            <!-- </div> -->
+            <!-- <div class="legend"> -->
+              <div class="friendly">Bicycle-friendly roads</div>
+              <div class="dirt">Dirt/unpaved trails</div>
+            <!-- </div> -->
+        </div>
+      </div>  
+    </div>
+      <div id='api_info'></div>
+    <div class='bg'></div>   
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>
+    <script type="text/javascript" src="src/js/googlemaps.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="src/js/sizer.js"></script>
+  </body>
+</html>

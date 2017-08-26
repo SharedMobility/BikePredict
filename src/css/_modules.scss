@@ -1,0 +1,241 @@
+//----------------------------------------------------------------------------
+//  COMMON COMPONENTS
+//----------------------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------------------
+//  FOOTER
+//----------------------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------------------
+//  HEADER
+//----------------------------------------------------------------------------
+
+.header {
+  color: rgba(255, 255, 255, 1);
+  left: 50%;
+  width: 260px;
+  position: absolute;
+  text-align: center;
+  top: 26%;
+  transform: translate(-50%, -50%);
+  @include responsive(coolidge) {
+    width: 400px;
+  }
+  @include responsive(nixon) {
+    width: 650px;
+  }
+  &:after {
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 120%;
+    left: -10%;
+    position: absolute;
+    top: -10%;
+    width: 120%;
+    z-index: -1;
+  }
+}
+
+p {
+  .header & {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+
+//----------------------------------------------------------------------------
+//  MAIN
+//----------------------------------------------------------------------------
+#api_info {
+  height: 100px;
+  padding: 10px;
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  display: none;
+}
+
+.component {
+  background: crimson;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Enriqueta";
+  margin: 20px auto;
+  padding: 50px 10px;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  width: 95%;
+}
+
+.component:before {
+  width: 100%;
+  color: darkblue;
+  font-size: 1.5em;
+  left: 0;
+  position: absolute;
+  top: 1%;
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
+}
+
+.temp {
+  background:#1D5B7F;
+  border: 1px solid #1D5B7F;
+}
+
+.temp:before {
+    content: 'Temperature';
+}
+
+.humidity {
+  background: #86D3FF;
+  border: 1px solid #86D3FF;
+}
+
+.humidity:before {
+  content: 'Humidity';
+}
+
+.aqi {
+  background: #3AB7FF;
+  border: 1px solid #3AB7FF;
+}
+
+.aqi:before {
+  content: 'Aqi';
+}
+
+.uv {
+  background: #43697F;
+  border: 1px solid #43697F;
+}
+
+.uv:before {
+  content: 'UV Index';
+}
+
+.wind {
+  background: #6A777F;
+  border: 1px solid #6A777F;
+}
+
+.wind:before {
+  content: 'Wind Speed';
+}
+
+.rain {
+  background: #6485E8;
+  border: 1px solid #6485E8;
+}
+
+.rain:before {
+  content: 'Chance of Rain';
+}
+
+.aqimessage {
+  padding-top: 5px;
+  color: white;
+  font-family: "Enriqueta";
+  font-size: 15px;
+}
+
+.uvmessage {
+  padding-top: 5px;
+  color: white;
+  font-family: "Enriqueta";
+  font-size: 15px;
+}
+
+.exit {
+  color: white;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 2.5rem;
+  right: 20px;
+  position: absolute;
+  top: 5px;
+}
+
+.explanation {
+  color: white;
+  padding-top: 5%;
+  position: relative;
+  top: 35%;
+  font-family: "IM Fell English";
+  text-align: center;
+}
+
+.explanation.inactive {
+  display: none;
+}
+
+@media only screen and (min-width: 620px) {
+  #api_info {
+    padding: 20px;
+  }
+  .component {
+    font-size: 1.5em;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 46%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 20px;
+  }
+  .uv, .aqi, {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  
+  .component {
+    margin-left: 3%;
+    width: 28%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 18px;
+  }
+  .rain, .uv, .aqi, {
+    height: 200px;
+  }
+}
+
+.pac-submit {
+  background: rgba(200, 200, 200, 1);
+  border: none;
+  margin-top: 24px;
+  padding: 6px 16px;
+  transition: all 600ms ease-in-out; 
+  &:hover {
+    background: rgba(150, 150, 150, 1);
+  }
+}
+
+.map-title {
+  background: rgb(29, 91, 127);
+  color: white;
+  padding: 8px 10px;
+}
+
+.nimg {
+  border: 1px solid crimson;
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.nback {
+  display: inline;
+  vertical-align: center;
+}

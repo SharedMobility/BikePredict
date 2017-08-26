@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------------------
+//  WRAPS
+// ----------------------------------------------------------------------------
+.y-wrap {
+    margin: 0 auto;
+    position: static;
+    width: 92%;
+}
+
+.y-legend {
+    background: orange;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    // width: 210px;  //c022
+    @include responsive(harding) {
+        display: block;
+        padding: 8px 0;
+        width: 100%;
+    }
+    @include responsive(nixon) {
+        // text-align: center;
+        width: 100%;
+    }
+}
+
+.bg {
+    background-image: url('../src/img/bike-background.jpg');
+    background-position: center center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    // &:after {
+    //     background: rgba(0, 0, 0, 0.6);
+    //     content: "";
+    //     height: 100%;
+    //     left: 0;
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: -5;
+    // }
+  }

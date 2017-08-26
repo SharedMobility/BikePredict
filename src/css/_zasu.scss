@@ -1,0 +1,184 @@
+#map {
+  height: 50%;
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  z-index: -1;
+}
+
+.hidden {
+  display: none;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+
+.legends {
+  background: white;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+    @include responsive(nixon) {
+      // text-align: center;
+    };
+}
+
+.legend {
+  @include responsive(harding) {
+    float: left;
+    width: calc(50% - 4px);
+    width: 100%;
+  };
+  @include responsive(nixon) {
+    display: inline-block;
+    float: none;
+    width: calc(50% - 4px);
+    // &:first-of-type {
+    //   text-align: right;
+    // }
+  };
+}
+
+// div {
+//   .legend & {
+//     position: relative;
+//     left: 30px;
+//     font-family: "Enriqueta";
+//     font-size: 20px;
+//     @include responsive(nixon) {
+//       display: inline-block;
+//       border: 1px crimson solid;
+//       left: 0;
+//       padding-left: 34px;
+//       // width: calc(50% - 4px);
+//       width: auto;
+//     };
+//     &:before {
+//       content: '';
+//       left: -30px;
+//       position: absolute;
+//       top: 40%;
+//       width: 20px;
+//       @include responsive(nixon) {
+//         left: 0;
+//       };
+//     }
+//   }
+// }
+
+div {
+  .legends & {
+    position: relative;
+    font-family: "Enriqueta";
+    font-size: 20px;
+    padding-left: 16px;
+    @include responsive(harding) {
+      diplay: inline-block;
+      width: calc(50% - 4px);
+    }
+    @include responsive(nixon) {
+      display: inline-block;
+      border: 1px crimson solid;
+      left: 0;
+      padding: 0 32px;
+      // width: calc(50% - 4px);
+      width: auto;
+    };
+    &:before {
+      content: '';
+      left: -14px;
+      position: absolute;
+      top: 40%;
+      width: 20px;
+      @include responsive(nixon) {
+        left: 0;
+      };
+    }
+  }
+}
+// .legend div {
+//   position: relative;
+//   left: 25px;
+//   font-family: "Enriqueta";
+//   font-size: 10px;
+// }
+
+// .legend div:before {
+//   content: '';
+//   left: -30px;
+//   position: absolute;
+//   top: 40%;
+//   width: 20px;
+// }
+
+
+.trails:before {
+  border: 2px solid #004c00;
+}
+
+.lanes:before {
+  border: 2px solid #028903;
+}
+
+.friendly:before {
+  border: 2px dashed #028903;
+}
+
+.dirt:before {
+  border: 2px solid #996633;
+}
+
+// @media only screen and (min-width: 620px) {
+//   .legends {
+//     max-width: 280px;
+//   }
+  
+//   .legend div {
+//     left: 20px;
+//     font-size: 15px;
+//   }
+  
+//   .legend div:before {
+//     left: -30px;
+//   }
+// }
+
+// @media only screen and (min-width: 920px) {
+//   .legend div {
+//     left: 40px;
+//     font-size: 10px;
+//   }
+// }

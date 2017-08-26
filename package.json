@@ -1,0 +1,32 @@
+{
+  "name": "aqi",
+  "version": "1.0.0",
+  "description": "http://i.imgur.com/u5nrMC9.png  #Intro page.  Put a location (zip code, city, country, etc) into the search.",
+  "main": "app.js",
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcyu/aqi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcyu/aqi/issues"
+  },
+  "homepage": "https://github.com/pcyu/aqi#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
