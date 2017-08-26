@@ -1,14 +1,13 @@
 #map {
-  height: 45%;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 30px;
+  height: 50%;
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  z-index: -1;
 }
 
-#explanation {
-  padding-top: 5%;
-  font-family: Roboto;
-  text-align: center;
+.hidden {
+  display: none;
 }
 
 #infowindow-content .title {
@@ -49,39 +48,102 @@ a[href^="https://www.google.com/maps"] {
 
 .legends {
   background: white;
+  display: none;
   margin: 0 auto;
-  max-width: 200px;
+  text-align: center;
+    @include responsive(nixon) {
+      // text-align: center;
+    };
 }
 
 .legend {
-  float: left;
-  width: 50%;
+  @include responsive(harding) {
+    float: left;
+    width: calc(50% - 4px);
+    width: 100%;
+  };
+  @include responsive(nixon) {
+    display: inline-block;
+    float: none;
+    width: calc(50% - 4px);
+    // &:first-of-type {
+    //   text-align: right;
+    // }
+  };
 }
 
-.legend div {
-  position: relative;
-  left: 25px;
-  font-family: "Enriqueta";
-  font-size: 10px;
-}
+// div {
+//   .legend & {
+//     position: relative;
+//     left: 30px;
+//     font-family: "Enriqueta";
+//     font-size: 20px;
+//     @include responsive(nixon) {
+//       display: inline-block;
+//       border: 1px crimson solid;
+//       left: 0;
+//       padding-left: 34px;
+//       // width: calc(50% - 4px);
+//       width: auto;
+//     };
+//     &:before {
+//       content: '';
+//       left: -30px;
+//       position: absolute;
+//       top: 40%;
+//       width: 20px;
+//       @include responsive(nixon) {
+//         left: 0;
+//       };
+//     }
+//   }
+// }
 
-.legend div:before {
-  content: '';
-  left: -30px;
-  position: absolute;
-  top: 40%;
-  width: 20px;
+div {
+  .legends & {
+    position: relative;
+    font-family: "Enriqueta";
+    font-size: 20px;
+    padding-left: 16px;
+    @include responsive(harding) {
+      diplay: inline-block;
+      width: calc(50% - 4px);
+    }
+    @include responsive(nixon) {
+      display: inline-block;
+      border: 1px crimson solid;
+      left: 0;
+      padding: 0 32px;
+      // width: calc(50% - 4px);
+      width: auto;
+    };
+    &:before {
+      content: '';
+      left: -14px;
+      position: absolute;
+      top: 40%;
+      width: 20px;
+      @include responsive(nixon) {
+        left: 0;
+      };
+    }
+  }
 }
+// .legend div {
+//   position: relative;
+//   left: 25px;
+//   font-family: "Enriqueta";
+//   font-size: 10px;
+// }
 
-.cf:after,
-.cf:before {
-  content: '';
-  display: table;
-}
+// .legend div:before {
+//   content: '';
+//   left: -30px;
+//   position: absolute;
+//   top: 40%;
+//   width: 20px;
+// }
 
-.cf:after {
-  clear: both;
-}
 
 .trails:before {
   border: 2px solid #004c00;
@@ -99,20 +161,20 @@ a[href^="https://www.google.com/maps"] {
   border: 2px solid #996633;
 }
 
-@media only screen and (min-width: 620px) {
-  .legends {
-    max-width: 280px;
-  }
+// @media only screen and (min-width: 620px) {
+//   .legends {
+//     max-width: 280px;
+//   }
   
-  .legend div {
-    left: 20px;
-    font-size: 15px;
-  }
+//   .legend div {
+//     left: 20px;
+//     font-size: 15px;
+//   }
   
-  .legend div:before {
-    left: -30px;
-  }
-}
+//   .legend div:before {
+//     left: -30px;
+//   }
+// }
 
 // @media only screen and (min-width: 920px) {
 //   .legend div {
