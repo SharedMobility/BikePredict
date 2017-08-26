@@ -18,11 +18,10 @@
   color: rgba(255, 255, 255, 1);
   right: 50%;
   width: 260px;
-  overflow: hidden;
   position: absolute;
   text-align: center;
   top: 26%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   @include responsive(coolidge) {
     width: 400px;
   }
@@ -40,6 +39,7 @@
     z-index: -1;
   }
   &.in-nav {
+    overflow: hidden;
     right: 0;
     top: -20px;
     transform: translate(0, 0);
