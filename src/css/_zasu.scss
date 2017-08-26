@@ -1,35 +1,13 @@
 #map {
-  height: 40%;
-  width: 90%;
-  margin: auto;
+  height: 50%;
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  z-index: -1;
 }
 
-#description {
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 300;
-  height: 100%;
-}
-
-#explanation {
-  padding-top: 5%;
-  font-family: Roboto;
-  text-align: center;
-}
-
-#legend {
+.hidden {
   display: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#legend.active {
-  display: block;
-}
-
-#legend img {
-  display: block;
-  margin: auto;
 }
 
 #infowindow-content .title {
@@ -44,8 +22,6 @@
   display: inline;
 }
 
-
-
 #title {
   color: #fff;
   background-color: #4d90fe;
@@ -58,18 +34,6 @@
   width: 345px;
 }
 
-#api_info {
-  padding: 10px;
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  display: none;
-}
-
-
-
-
-
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
 a[href^="https://www.google.com/maps"] {
@@ -81,3 +45,140 @@ a[href^="https://www.google.com/maps"] {
 .gm-bundled-control .gmnoprint {
     display: block;
 }
+
+.legends {
+  background: white;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+    @include responsive(nixon) {
+      // text-align: center;
+    };
+}
+
+.legend {
+  @include responsive(harding) {
+    float: left;
+    width: calc(50% - 4px);
+    width: 100%;
+  };
+  @include responsive(nixon) {
+    display: inline-block;
+    float: none;
+    width: calc(50% - 4px);
+    // &:first-of-type {
+    //   text-align: right;
+    // }
+  };
+}
+
+// div {
+//   .legend & {
+//     position: relative;
+//     left: 30px;
+//     font-family: "Enriqueta";
+//     font-size: 20px;
+//     @include responsive(nixon) {
+//       display: inline-block;
+//       border: 1px crimson solid;
+//       left: 0;
+//       padding-left: 34px;
+//       // width: calc(50% - 4px);
+//       width: auto;
+//     };
+//     &:before {
+//       content: '';
+//       left: -30px;
+//       position: absolute;
+//       top: 40%;
+//       width: 20px;
+//       @include responsive(nixon) {
+//         left: 0;
+//       };
+//     }
+//   }
+// }
+
+div {
+  .legends & {
+    position: relative;
+    font-family: "Enriqueta";
+    font-size: 20px;
+    padding-left: 16px;
+    @include responsive(harding) {
+      diplay: inline-block;
+      width: calc(50% - 4px);
+    }
+    @include responsive(nixon) {
+      display: inline-block;
+      border: 1px crimson solid;
+      left: 0;
+      padding: 0 32px;
+      // width: calc(50% - 4px);
+      width: auto;
+    };
+    &:before {
+      content: '';
+      left: -14px;
+      position: absolute;
+      top: 40%;
+      width: 20px;
+      @include responsive(nixon) {
+        left: 0;
+      };
+    }
+  }
+}
+// .legend div {
+//   position: relative;
+//   left: 25px;
+//   font-family: "Enriqueta";
+//   font-size: 10px;
+// }
+
+// .legend div:before {
+//   content: '';
+//   left: -30px;
+//   position: absolute;
+//   top: 40%;
+//   width: 20px;
+// }
+
+
+.trails:before {
+  border: 2px solid #004c00;
+}
+
+.lanes:before {
+  border: 2px solid #028903;
+}
+
+.friendly:before {
+  border: 2px dashed #028903;
+}
+
+.dirt:before {
+  border: 2px solid #996633;
+}
+
+// @media only screen and (min-width: 620px) {
+//   .legends {
+//     max-width: 280px;
+//   }
+  
+//   .legend div {
+//     left: 20px;
+//     font-size: 15px;
+//   }
+  
+//   .legend div:before {
+//     left: -30px;
+//   }
+// }
+
+// @media only screen and (min-width: 920px) {
+//   .legend div {
+//     left: 40px;
+//     font-size: 10px;
+//   }
+// }

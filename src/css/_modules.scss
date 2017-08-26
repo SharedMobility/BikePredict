@@ -14,41 +14,81 @@
 //  HEADER
 //----------------------------------------------------------------------------
 
+.header {
+  color: rgba(255, 255, 255, 1);
+  left: 50%;
+  width: 260px;
+  position: absolute;
+  text-align: center;
+  top: 26%;
+  transform: translate(-50%, -50%);
+  @include responsive(coolidge) {
+    width: 400px;
+  }
+  @include responsive(nixon) {
+    width: 650px;
+  }
+  &:after {
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 120%;
+    left: -10%;
+    position: absolute;
+    top: -10%;
+    width: 120%;
+    z-index: -1;
+  }
+}
+
+p {
+  .header & {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 
 //----------------------------------------------------------------------------
 //  MAIN
 //----------------------------------------------------------------------------
+#api_info {
+  height: 100px;
+  padding: 10px;
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  display: none;
+}
+
 .component {
+  background: crimson;
   border-radius: 4px;
   color: white;
-  font-size: 1em;
-  font-family: Roboto;
-  margin: 40px auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  font-size: 1.5em;
+  font-family: "Enriqueta";
+  margin: 20px auto;
+  padding: 50px 10px;
   position: relative;
   text-align: center;
   box-sizing: border-box;
-  width: 80%;
+  width: 95%;
 }
 
 .component:before {
   width: 100%;
-  color: black;
-  font-size: 1em;
+  color: darkblue;
+  font-size: 1.5em;
   left: 0;
   position: absolute;
-  top: -20px;
-  font-family: Roboto;
+  top: 1%;
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
 }
 
-
 .temp {
-  background:#EBB5FF;
-  border: 1px solid #EBB5FF;
+  background:#1D5B7F;
+  border: 1px solid #1D5B7F;
 }
 
 .temp:before {
@@ -56,8 +96,8 @@
 }
 
 .humidity {
-  background: #3AFFA9;
-  border: 1px solid #3AFFA9;
+  background: #86D3FF;
+  border: 1px solid #86D3FF;
 }
 
 .humidity:before {
@@ -65,8 +105,8 @@
 }
 
 .aqi {
-  background: #36E8E4;
-  border: 1px solid #36E8E4;
+  background: #3AB7FF;
+  border: 1px solid #3AB7FF;
 }
 
 .aqi:before {
@@ -74,8 +114,8 @@
 }
 
 .uv {
-  background: #4E32FF;
-  border: 1px solid #4E32FF;
+  background: #43697F;
+  border: 1px solid #43697F;
 }
 
 .uv:before {
@@ -83,8 +123,8 @@
 }
 
 .wind {
-  background: #3AB7FF;
-  border: 1px solid #3AB7FF;
+  background: #6A777F;
+  border: 1px solid #6A777F;
 }
 
 .wind:before {
@@ -103,60 +143,21 @@
 .aqimessage {
   padding-top: 5px;
   color: white;
-  font-family: Roboto;
-  font-size: 11px;
+  font-family: "Enriqueta";
+  font-size: 15px;
 }
 
 .uvmessage {
   padding-top: 5px;
   color: white;
-  font-family: Roboto;
-  font-size: 11px;
-}
-
-
-@media only screen and (min-width: 620px) {
-  #api_info {
-    padding: 50px;
-  }
-  .component {
-    font-size: 1.5em;
-    float: left;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 46%;
-  }
-  .component:before {
-    padding-top: 15px;
-    top: -55px;
-  }
-
-  .aqimessage, .uvmessage {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (min-width: 920px) {
-  #api_info {
-    padding: 75px;
-  }
-  .component {
-    font-size: 2em;
-    width: 29.25%;
-  }
-  .component:before {
-    padding-top: 150px;
-    top: -200px;
-  }
-  .aqimessage, .uvmessage {
-    font-size: 17px;
-  }
+  font-family: "Enriqueta";
+  font-size: 15px;
 }
 
 .exit {
   color: white;
   cursor: pointer;
-  font-family: arial;
+  font-family: Arial;
   font-size: 2.5rem;
   right: 20px;
   position: absolute;
@@ -166,10 +167,75 @@
 .explanation {
   color: white;
   padding-top: 5%;
-  font-family: Roboto;
+  position: relative;
+  top: 35%;
+  font-family: "IM Fell English";
   text-align: center;
 }
 
 .explanation.inactive {
   display: none;
+}
+
+@media only screen and (min-width: 620px) {
+  #api_info {
+    padding: 20px;
+  }
+  .component {
+    font-size: 1.5em;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 46%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 20px;
+  }
+  .uv, .aqi, {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  
+  .component {
+    margin-left: 3%;
+    width: 28%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 18px;
+  }
+  .rain, .uv, .aqi, {
+    height: 200px;
+  }
+}
+
+.pac-submit {
+  background: rgba(200, 200, 200, 1);
+  border: none;
+  margin-top: 24px;
+  padding: 6px 16px;
+  transition: all 600ms ease-in-out; 
+  &:hover {
+    background: rgba(150, 150, 150, 1);
+  }
+}
+
+.map-title {
+  background: rgb(29, 91, 127);
+  color: white;
+  padding: 8px 10px;
+}
+
+.nimg {
+  border: 1px solid crimson;
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.nback {
+  display: inline;
+  vertical-align: center;
 }
