@@ -4,16 +4,12 @@ function initAutocomplete() {
     center: {lat: 37, lng: -95},
     zoom: 4,
     disableDefaultUI: true,
-    mapTypeId: 'terrain'
+    mapTypeId: 'terrain',
   });
-
-  var bikeLayer = new google.maps.BicyclingLayer();
-  bikeLayer.setMap(map);
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -23,7 +19,18 @@ function initAutocomplete() {
   var markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
+
+  document.getElementById('t-pac-submit').onclick = function () {
+    var input = document.getElementById('pac-input');
+
+    google.maps.event.trigger(input, 'focus')
+    google.maps.event.trigger(input, 'keydown', { keyCode: 13 });
+  };
+
   searchBox.addListener('places_changed', function() {
+
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
 
     var places = searchBox.getPlaces();
 
@@ -72,9 +79,17 @@ function initAutocomplete() {
 
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
-    $("#explanation").hide();
+
     $("#api_info").show();
-    $("#legend").show();
+    $("#t-map-title").removeClass('hidden');
+    $("#map").removeClass('hidden');
+    google.maps.event.trigger(map, 'resize');
+    $(".legends").show();
+    $('.will-hide').hide();
+    $('.bg').hide();
+    // $('#t-back').on("click", function(){
+    //   location.reload();
+    // });
 
       var weatherCall =
         $.ajax({
@@ -161,15 +176,17 @@ function initAutocomplete() {
 
           const rain = Math.round(firstResponse[0].currently.precipProbability*100);
           const humid = Math.round(firstResponse[0].currently.humidity*100);
+          const temp = Math.round(Number(firstResponse[0].currently.temperature));
+          const wind = Math.round(firstResponse[0].currently.windSpeed);
 
           $('#api_info').html(
             `
-            <div class="component temp"><span>${firstResponse[0].currently.temperature}°F</span></div>
+            <div class="component temp"><span>${temp}°F</span></div>
             <div class="component humidity"><span>${humid}%</span></div>
-            <div class="component wind"><span>${firstResponse[0].currently.windSpeed} mph ${windDirection()}</span></div>
+            <div class="component wind"><span>${wind} mph ${windDirection()}</span></div>
             <div class="component rain"><span>${rain}%</span></div>
-            <div class="component uv"><span>${firstResponse[0].currently.uvIndex}</span><div class="uvmessage">${uviMessage()}</div></div>
-            <div class="component aqi"><span>${secondResponse[0].data.aqi}</span><div class="aqimessage">${aqiMessage()}</div></div>
+            <div class="component uv"><span>${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></span></div>
+            <div class="component aqi"><span>${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></span></div>
             `
           )
         })

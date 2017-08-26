@@ -10,23 +10,47 @@ a {
 //  Body
 //----------------------------------------------------------------------------
 body {
+  background: #f5f5dc;
   height: 100%;
+  font-family: "Enriqueta";
+  font-weight: normal;
+  font-style: normal;
+  position: relative;
 }
 
+// @media only screen and (min-width: 620px) {
+
+//   body {
+//     overflow: hidden;
+//   }
+//   body.active {
+//     overflow: scroll;
+//   }
+// }
+  
 
 //----------------------------------------------------------------------------
 //  Headings
 //----------------------------------------------------------------------------
 h1 {
+  font-size: 4rem;
+  font-family: "Crimson Text";
+  font-weight: 600;
+  font-style: normal;
+  margin: 10px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
-
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
 }
 
 h3 {
-
+  display: inline-block;
+  vertical-align: middle;
 }
 
 h4 {
@@ -54,8 +78,19 @@ html {
 //  Image
 //----------------------------------------------------------------------------
 img {
-
+  height: auto;
+  width: 100%;
 }
+
+//----------------------------------------------------------------------------
+//  Input
+//----------------------------------------------------------------------------
+
+input, input:focus {
+  outline: none;
+  }
+  
+  
 
 
 //----------------------------------------------------------------------------
