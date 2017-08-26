@@ -48,7 +48,16 @@
     font-size: 1.0rem;
     margin-right: 90px;
     padding: 4px;
-    width: 100px;
+    width: 80px;
+    @include responsive(taft) {
+      width: 130px;
+    }
+    @include responsive(wilson) {
+      width: 150px;
+    }
+    @include responsive(harding) {
+      width: 170px;
+    }
   }
 }
 

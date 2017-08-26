@@ -80,7 +80,7 @@ p {
 }
 
 .component {
-  background: crimson;
+  background: #43697F;
   border-radius: 4px;
   color: white;
   font-size: 1.5em;
@@ -105,55 +105,55 @@ p {
   font-style: oblique;
 }
 
-.temp {
-  background:#1D5B7F;
-  border: 1px solid #1D5B7F;
-}
+// .temp {
+//   background:#1D5B7F;
+//   border: 1px solid #1D5B7F;
+// }
 
 .temp:before {
     content: 'Temperature';
 }
 
-.humidity {
-  background: #86D3FF;
-  border: 1px solid #86D3FF;
-}
+// .humidity {
+//   background: #86D3FF;
+//   border: 1px solid #86D3FF;
+// }
 
 .humidity:before {
   content: 'Humidity';
 }
 
-.aqi {
-  background: #3AB7FF;
-  border: 1px solid #3AB7FF;
-}
+// .aqi {
+//   background: #3AB7FF;
+//   border: 1px solid #3AB7FF;
+// }
 
 .aqi:before {
   content: 'Aqi';
 }
 
-.uv {
-  background: #43697F;
-  border: 1px solid #43697F;
-}
+// .uv {
+//   background: #43697F;
+//   border: 1px solid #43697F;
+// }
 
 .uv:before {
   content: 'UV Index';
 }
 
-.wind {
-  background: #6A777F;
-  border: 1px solid #6A777F;
-}
+// .wind {
+//   background: #6A777F;
+//   border: 1px solid #6A777F;
+// }
 
 .wind:before {
   content: 'Wind Speed';
 }
 
-.rain {
-  background: #6485E8;
-  border: 1px solid #6485E8;
-}
+// .rain {
+//   background: #6485E8;
+//   border: 1px solid #6485E8;
+// }
 
 .rain:before {
   content: 'Chance of Rain';
@@ -183,18 +183,18 @@ p {
   top: 5px;
 }
 
-.explanation {
-  color: white;
-  padding-top: 5%;
-  position: relative;
-  top: 35%;
-  font-family: "IM Fell English";
-  text-align: center;
-}
+// .explanation {
+//   color: white;
+//   padding-top: 5%;
+//   position: relative;
+//   top: 35%;
+//   font-family: "IM Fell English";
+//   text-align: center;
+// }
 
-.explanation.inactive {
-  display: none;
-}
+// .explanation.inactive {
+//   display: none;
+// }
 
 @media only screen and (min-width: 620px) {
   #api_info {
@@ -230,7 +230,7 @@ p {
 }
 
 .map-title {
-  background: rgb(29, 91, 127);
+  background: #43697F;
   color: white;
   padding: 16px 10px;
 }
@@ -246,7 +246,7 @@ p {
 //   }
 // }
 
-.nback {
-  display: inline;
-  vertical-align: center;
-}
+// .nback {
+//   display: inline;
+//   vertical-align: center;
+// }

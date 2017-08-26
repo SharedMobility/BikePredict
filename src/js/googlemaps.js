@@ -2,7 +2,7 @@ function initAutocomplete() {
   $(function(){
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 37, lng: -95},
-    zoom: 4,
+    zoom: 5,
     disableDefaultUI: true,
     mapTypeId: 'terrain',
   });
@@ -86,8 +86,8 @@ function initAutocomplete() {
       }
     });
     map.fitBounds(bounds);
-    map.setZoom(13);
-
+    map.setZoom(15);
+  
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
 
