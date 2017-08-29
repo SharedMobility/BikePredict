@@ -97,10 +97,7 @@ function initAutocomplete() {
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
     $('.will-hide').hide();
-    $('.bg').hide();
-    // $('#t-back').on("click", function(){
-    //   location.reload();
-    // });
+    // $('.bg').hide();
 
       var weatherCall =
         $.ajax({
