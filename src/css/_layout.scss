@@ -3,10 +3,10 @@
 // ----------------------------------------------------------------------------
 .y-wrap {
     margin: 0 auto;
-    position: static;
+    position: relative;
     width: 92%;
-    &.in-nav {
-        position: relative;
+    &.modified {
+        height: 100vh;
     }
 }
 

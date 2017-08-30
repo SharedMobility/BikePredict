@@ -11,21 +11,17 @@
   </head>
   <body>
     <header>
-      <div class="y-wrap" id="t-y-wrap">
+      <div class="y-wrap modified" id="t-y-wrap">
         <div id="t-header" class="header_content">
-          <h1 class="will-hide">Bike Predict</h1>
-          <p class="will-hide">Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
+          <h1>Bike Predict</h1>
+          <p>Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
           <input id="pac-input" class="controls" type="text" placeholder="Type in a street">
           <button id="t-pac-submit" class="pac-submit" type='submit'>Search</button>
-        </div>
-        <div id="t-map-title" class='hidden map-title'>
-          <h3>Bike Predict</h3>
         </div>
       </div>
     </header>
     <main>
       <div id='map'></div>
-      <div class="y-wrap">
         <div class="legends">
             <div class="y-legend cf">
                 <div class="trails">Trails</div>
@@ -34,11 +30,14 @@
                 <div class="dirt">Dirt/unpaved trails</div>
             </div>
         </div> 
-      </div>
-      <div class = "component temp">
+    <div class="y-wrap">
+      <div class="component temp">
+        <div class="stats"> 
         <p>Icon</p>
         <p id="t-temp-value">Number- Dynamic</p>
         <p>Temperature</p>
+        </div>
+        <div class="summary"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
       </div>
       <div class = "component humid">
         <p>Icon</p>
@@ -65,9 +64,8 @@
         <p id="t-aqi-value">Number- Dynamic</p>
         <p>Air Quality Index</p>
       </div>
+    </div>
     </main>
-    <div id='api_info'></div>
-    <div class='bg'></div>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>
     <script type="text/javascript" src="src/js/googlemaps.js"></script>

@@ -18,17 +18,17 @@ header {
     background-image: url('../src/img/bike-background2.jpg');
     background-attachment: scroll;
     background-position: center center;
-    height: 100vh;
     width: 100%;
 }
 .header_content {
   color: rgba(255, 255, 255, 1);
-  right: 50%;
-  width: 260px;
+  height: auto;
   position: absolute;
+  right: 50%;
   text-align: center;
-  top: 26%;
+  top: 50%;
   transform: translate(50%, -50%);
+  width: 260px;
   @include responsive(coolidge) {
     width: 400px;
   }
@@ -92,9 +92,9 @@ main {
 
 .component {
   color: white;
-  height: 180px;
+  margin: 6px 0;
   position: relative;
-  width: 220px;
+  width: 100%;
 }
 
 .aqi {
@@ -214,11 +214,6 @@ main {
   .rain, .uv, .aqi, {
     height: 200px;
   }
-}
-
-.map-title {
-  color: white;
-  padding: 16px 10px;
 }
 
 // .nimg {

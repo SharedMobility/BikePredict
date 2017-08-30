@@ -1,7 +1,6 @@
 #map {
-  height: 50%;
-  width: 92%;
-  margin: 0 auto;
+  height: 50vh;
+  margin: 20px auto 0;
   padding-bottom: 100px;
   z-index: -1;
 }
@@ -47,9 +46,10 @@ a[href^="https://www.google.com/maps"] {
 }
 
 .legends {
-  background: white;
-  display: none;
+  background: #e6eadf;
+  border-top: 3px solid rgba(0, 128, 0, 0.3);
   margin: 0 auto;
+  padding: 12px 0;
   text-align: center;
     @include responsive(nixon) {
       // text-align: center;
