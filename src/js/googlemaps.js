@@ -96,7 +96,6 @@ function initAutocomplete() {
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
     $('.will-hide').hide();
-    $('.bg').hide();
 
       var weatherCall =
         $.ajax({
