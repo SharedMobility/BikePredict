@@ -46,24 +46,6 @@ header {
     width: 120%;
     z-index: -1;
   }
-  &.in-nav {
-    overflow: hidden;
-    right: 0;
-    text-align: left;
-    top: -20px;
-    transform: translate(0, 0);
-    @include responsive(coolidge) {
-      width: 260px;
-    }
-    @include responsive(nixon) {
-      width: 260px;
-    }
-    &:after {
-      background: none;
-      width: 100%;
-      right: 0;
-    }
-  }
 }
 
 p {
@@ -81,20 +63,30 @@ main {
   display: block;
 }
 
-#api_info {
-  height: 100px;
-  padding: 10px;
-  position: relative;
-  display: block;
-  margin: 10px auto;
-  display: none;
-}
-
 .component {
   color: white;
   margin: 6px 0;
   position: relative;
   width: 100%;
+}
+
+.stats {
+  border: 1px solid orange;
+  float: left;
+  width: 200px;
+  .cf:after & {
+    clear: both;
+  }
+}
+
+.summary {
+  border: 1px solid red;
+  float: right;
+  height: 200px;
+  width: calc(100% - 200px);
+  &.cf:after {
+    clear: both;
+  }
 }
 
 .aqi {
