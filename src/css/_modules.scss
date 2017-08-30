@@ -14,7 +14,14 @@
 //  HEADER
 //----------------------------------------------------------------------------
 
-.header {
+header {
+    background-image: url('../src/img/bike-background2.jpg');
+    background-attachment: scroll;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+}
+.header_content {
   color: rgba(255, 255, 255, 1);
   right: 50%;
   width: 260px;
@@ -60,7 +67,7 @@
 }
 
 p {
-  .header & {
+  .header_content & {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -70,6 +77,10 @@ p {
 //----------------------------------------------------------------------------
 //  MAIN
 //----------------------------------------------------------------------------
+main {
+  display: block;
+}
+
 #api_info {
   height: 100px;
   padding: 10px;
@@ -80,98 +91,87 @@ p {
 }
 
 .component {
-  background: rgba(0, 0, 0, .4);
-  border-radius: 4px;
   color: white;
-  font-size: 1.5em;
-  font-family: "Enriqueta";
-  margin: 20px auto;
-  padding: 50px 10px;
+  height: 180px;
   position: relative;
-  text-align: center;
-  box-sizing: border-box;
-  width: 95%;
+  width: 220px;
 }
 
-.component:before {
-  width: 100%;
-  color: white;
-  font-size: 1.5em;
-  left: 0;
-  position: absolute;
-  top: 1%;
-  font-family: "IM Fell English";
-  font-weight: normal;
-  font-style: oblique;
+.aqi {
+  background: url('../src/img/aqi-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
-// .temp {
-//   background:#1D5B7F;
-//   border: 1px solid #1D5B7F;
+.humid {
+  background: url('../src/img/humid-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.rain {
+  background: url('../src/img/rain-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.temp {
+  background: url('../src/img/temp-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.uv {
+  background: url('../src/img/uv-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.wind {
+  background: url('../src/img/wind-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+// .component {
+//   background: rgba(0, 0, 0, .4);
+//   border-radius: 4px;
+//   color: white;
+//   font-size: 1.5em;
+//   font-family: "Enriqueta";
+//   margin: 20px auto;
+//   padding: 50px 10px;
+//   position: relative;
+//   text-align: center;
+//   box-sizing: border-box;
+//   width: 95%;
 // }
 
-.temp:before {
-    content: 'Temperature';
-}
-
-// .humidity {
-//   background: #86D3FF;
-//   border: 1px solid #86D3FF;
+// .component:before {
+//   width: 100%;
+//   color: white;
+//   font-size: 1.5em;
+//   left: 0;
+//   position: absolute;
+//   top: 1%;
+//   font-family: "IM Fell English";
+//   font-weight: normal;
+//   font-style: oblique;
 // }
 
-.humidity:before {
-  content: 'Humidity';
-}
-
-// .aqi {
-//   background: #3AB7FF;
-//   border: 1px solid #3AB7FF;
+// .aqimessage {
+//   padding-top: 5px;
+//   color: white;
+//   font-family: "Enriqueta";
+//   font-size: 15px;
 // }
 
-.aqi:before {
-  content: 'Aqi';
-}
-
-// .uv {
-//   background: #43697F;
-//   border: 1px solid #43697F;
+// .uvmessage {
+//   padding-top: 5px;
+//   color: white;
+//   font-family: "Enriqueta";
+//   font-size: 15px;
 // }
-
-.uv:before {
-  content: 'UV Index';
-}
-
-// .wind {
-//   background: #6A777F;
-//   border: 1px solid #6A777F;
-// }
-
-.wind:before {
-  content: 'Wind Speed';
-}
-
-// .rain {
-//   background: #6485E8;
-//   border: 1px solid #6485E8;
-// }
-
-.rain:before {
-  content: 'Chance of Rain';
-}
-
-.aqimessage {
-  padding-top: 5px;
-  color: white;
-  font-family: "Enriqueta";
-  font-size: 15px;
-}
-
-.uvmessage {
-  padding-top: 5px;
-  color: white;
-  font-family: "Enriqueta";
-  font-size: 15px;
-}
 
 .exit {
   color: white;
@@ -182,19 +182,6 @@ p {
   position: absolute;
   top: 5px;
 }
-
-// .explanation {
-//   color: white;
-//   padding-top: 5%;
-//   position: relative;
-//   top: 35%;
-//   font-family: "IM Fell English";
-//   text-align: center;
-// }
-
-// .explanation.inactive {
-//   display: none;
-// }
 
 @media only screen and (min-width: 620px) {
   #api_info {

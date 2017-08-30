@@ -10,35 +10,63 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600-IM+Fell+English:italic-Enriqueta:regular" rel="stylesheet">
   </head>
   <body>
-    <div class="y-wrap" id="t-y-wrap">
-      <div id="t-header" class="header">
-        <h1 class="will-hide">Bike Predict</h1>
-        <p class="will-hide">Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
-        <input id="pac-input" class="controls" type="text" placeholder="Type in a street">
-        <button id="t-pac-submit" class="pac-submit" type='submit'>Search</button>
-      </div>
-      <div id="t-map-title" class='hidden map-title'>
-        <h3>Bike Predict</h3>
-        <!-- <div class="nimg"><img src="../src/img/bike_icon1.png"/></div> -->
-        <!-- <div class="nback"><button id="t-back" class="back">Search Again</button></div> -->
-      </div>
-    </div>
-    <div id='map' class='hidden'></div>
-    <div class="y-wrap">
-      <div class="legends">
-          <div class="y-legend cf">
-            <!-- <div class="legend"> -->
-              <div class="trails">Trails</div>
-              <div class="lanes">Dedicated lanes</div>
-            <!-- </div> -->
-            <!-- <div class="legend"> -->
-              <div class="friendly">Bicycle-friendly roads</div>
-              <div class="dirt">Dirt/unpaved trails</div>
-            <!-- </div> -->
+    <header>
+      <div class="y-wrap" id="t-y-wrap">
+        <div id="t-header" class="header_content">
+          <h1 class="will-hide">Bike Predict</h1>
+          <p class="will-hide">Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
+          <input id="pac-input" class="controls" type="text" placeholder="Type in a street">
+          <button id="t-pac-submit" class="pac-submit" type='submit'>Search</button>
+        </div>
+        <div id="t-map-title" class='hidden map-title'>
+          <h3>Bike Predict</h3>
         </div>
       </div>
-    </div>
-      <div id='api_info'></div>
+    </header>
+    <main>
+      <div id='map'></div>
+      <div class="y-wrap">
+        <div class="legends">
+            <div class="y-legend cf">
+                <div class="trails">Trails</div>
+                <div class="lanes">Dedicated lanes</div>
+                <div class="friendly">Bicycle-friendly roads</div>
+                <div class="dirt">Dirt/unpaved trails</div>
+            </div>
+        </div> 
+      </div>
+      <div class = "component temp">
+        <p>Icon</p>
+        <p id="t-temp-value">Number- Dynamic</p>
+        <p>Temperature</p>
+      </div>
+      <div class = "component humid">
+        <p>Icon</p>
+        <p id="t-humid-value">Number- Dynamic</p>
+        <p>Humidity</p>
+      </div>
+      <div class = "component wind">
+        <p>Icon</p>
+        <p id="t-wind-value">Number- Dynamic</p>
+        <p>Wind Speed</p>
+      </div>
+      <div class = "component rain">
+        <p>Icon</p>
+        <p id="t-rain-value">Number- Dynamic</p>
+        <p>Rain</p>
+      </div>
+      <div class = "component uv">
+        <p>Icon</p>
+        <p id="t-uv-value">Number- Dynamic</p>
+        <p>UV Index</p>
+      </div>
+      <div class = "component aqi">
+        <p>Icon</p>
+        <p id="t-aqi-value">Number- Dynamic</p>
+        <p>Air Quality Index</p>
+      </div>
+    </main>
+    <div id='api_info'></div>
     <div class='bg'></div>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>

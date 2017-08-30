@@ -20,29 +20,6 @@
         width: 100%;
     }
 }
-
-.bg {
-    background-image: url('../src/img/bike-background2.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    height: 170%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -10;
-    @include responsive(harding) {
-        height: 165%;
-    }
-    @include responsive(hoover) {
-        height: 135%;
-    }
-    @include responsive(johnson) {
-        height: 110%;
-    }
-    @include responsive(nixon) {
-        height: 105%;
-    }
     // &:after {
     //     background: rgba(0, 0, 0, 0.6);
     //     content: "";

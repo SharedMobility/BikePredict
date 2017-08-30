@@ -93,11 +93,10 @@ function initAutocomplete() {
 
     $("#api_info").show();
     $("#t-map-title").removeClass('hidden');
-    $("#map").removeClass('hidden');
     google.maps.event.trigger(map, 'resize');
     $(".legends").show();
     $('.will-hide').hide();
-    // $('.bg').hide();
+    $('.bg').hide();
 
       var weatherCall =
         $.ajax({
@@ -187,16 +186,16 @@ function initAutocomplete() {
           const temp = Math.round(Number(firstResponse[0].currently.temperature));
           const wind = Math.round(firstResponse[0].currently.windSpeed);
 
-          $('#api_info').html(
-            `
-            <div class="component temp"><span>${temp}°F</span></div>
-            <div class="component humidity"><span>${humid}%</span></div>
-            <div class="component wind"><span>${wind} mph ${windDirection()}</span></div>
-            <div class="component rain"><span>${rain}%</span></div>
-            <div class="component uv"><span>${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></span></div>
-            <div class="component aqi"><span>${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></span></div>
-            `
-          )
+        //   $('#api_info').html(
+        //     `
+        //     <div class="component temp"><span>${temp}°F</span></div>
+        //     <div class="component humidity"><span>${humid}%</span></div>
+        //     <div class="component wind"><span>${wind} mph ${windDirection()}</span></div>
+        //     <div class="component rain"><span>${rain}%</span></div>
+        //     <div class="component uv"><span>${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></span></div>
+        //     <div class="component aqi"><span>${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></span></div>
+        //     `
+        //   )
         })
       })
   })
