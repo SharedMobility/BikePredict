@@ -174,14 +174,14 @@ function initAutocomplete() {
           $("#t-humid-value").html(`${humid}%`);
           $("#t-wind-value").html(`${wind} mph ${windDirection()}`);
           $("#t-rain-value").html(`${rain}%`);
-          $("#t-uv-value").html(`${uv}`);
+          $("#t-uv-value").html(`${uv} out of 11`);
           $("#t-aqi-value").html(`${aqi}`);
-          $("#t-temp-explanation").html("");
-          $("#t-humid-explanation").html("");
-          $("#t-wind-explanation").html("");
-          $("#t-rain-explanation").html("");
-          $("#t-uv-explanation").html("");
-          $("#t-aqi-explanation").html("");
+          $("#t-explanation").html(
+            `
+            <p>${aqiMessage()}</p> 
+            <p>${uviMessage()}</p>
+            `
+          );
         })
       })
   })

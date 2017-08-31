@@ -91,18 +91,26 @@ div {
   }
 }
 
-.trails:before {
+.trails {
+  &:before {
   border: 2px solid #004c00;
+  }
 }
 
-.lanes:before {
-  border: 2px solid #028903;
+.lanes {
+  &:before {
+    border: 2px solid #028903;
+  }
 }
 
-.friendly:before {
-  border: 2px dashed #028903;
+.friendly {
+  &:before {
+    border: 2px dashed #028903;
+  }
 }
 
-.dirt:before {
-  border: 2px solid #996633;
+.dirt {
+  &:before {
+    border: 2px solid #996633;
+  }
 }
