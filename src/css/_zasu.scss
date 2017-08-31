@@ -51,9 +51,6 @@ a[href^="https://www.google.com/maps"] {
   margin: 0 auto;
   padding: 12px 0;
   text-align: center;
-    @include responsive(nixon) {
-      // text-align: center;
-    };
 }
 
 .legend {
@@ -66,38 +63,8 @@ a[href^="https://www.google.com/maps"] {
     display: inline-block;
     float: none;
     width: calc(50% - 4px);
-    // &:first-of-type {
-    //   text-align: right;
-    // }
   };
 }
-
-// div {
-//   .legend & {
-//     position: relative;
-//     left: 30px;
-//     font-family: "Enriqueta";
-//     font-size: 20px;
-//     @include responsive(nixon) {
-//       display: inline-block;
-//       border: 1px crimson solid;
-//       left: 0;
-//       padding-left: 34px;
-//       // width: calc(50% - 4px);
-//       width: auto;
-//     };
-//     &:before {
-//       content: '';
-//       left: -30px;
-//       position: absolute;
-//       top: 40%;
-//       width: 20px;
-//       @include responsive(nixon) {
-//         left: 0;
-//       };
-//     }
-//   }
-// }
 
 div {
   .legends & {

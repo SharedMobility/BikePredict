@@ -118,32 +118,6 @@ main {
   background-position: center center;
 }
 
-// .component {
-//   background: rgba(0, 0, 0, .4);
-//   border-radius: 4px;
-//   color: white;
-//   font-size: 1.5em;
-//   font-family: "Enriqueta";
-//   margin: 20px auto;
-//   padding: 50px 10px;
-//   position: relative;
-//   text-align: center;
-//   box-sizing: border-box;
-//   width: 95%;
-// }
-
-// .component:before {
-//   width: 100%;
-//   color: white;
-//   font-size: 1.5em;
-//   left: 0;
-//   position: absolute;
-//   top: 1%;
-//   font-family: "IM Fell English";
-//   font-weight: normal;
-//   font-style: oblique;
-// }
-
 // .aqimessage {
 //   padding-top: 5px;
 //   color: white;
@@ -156,63 +130,4 @@ main {
 //   color: white;
 //   font-family: "Enriqueta";
 //   font-size: 15px;
-// }
-
-.exit {
-  color: white;
-  cursor: pointer;
-  font-family: Arial;
-  font-size: 2.5rem;
-  right: 20px;
-  position: absolute;
-  top: 5px;
-}
-
-@media only screen and (min-width: 620px) {
-  #api_info {
-    padding: 20px;
-  }
-  .component {
-    font-size: 1.5em;
-    float: left;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 46%;
-  }
-  .aqimessage, .uvmessage {
-    font-size: 20px;
-  }
-  .uv, .aqi, {
-    height: 250px;
-  }
-}
-
-@media only screen and (min-width: 920px) {
-
-  .component {
-    margin-left: 3%;
-    width: 28%;
-  }
-  .aqimessage, .uvmessage {
-    font-size: 18px;
-  }
-  .rain, .uv, .aqi, {
-    height: 200px;
-  }
-}
-
-// .nimg {
-//   border: 1px solid crimson;
-//   display: none;
-//   margin-left: 12px;
-//   vertical-align: middle;
-//   width: 50px;
-//   @include responsive(harding) {
-//     display: inline-block;
-//   }
-// }
-
-// .nback {
-//   display: inline;
-//   vertical-align: center;
 // }

@@ -42,23 +42,6 @@
   text-align: center;
   text-overflow: ellipsis;
   width: 260px;
-  .in-nav & {
-    border: 1px solid transparent;
-    border-radius: 20px;
-    font-size: 1.0rem;
-    margin-right: 90px;
-    padding: 4px;
-    width: 80px;
-    @include responsive(taft) {
-      width: 130px;
-    }
-    @include responsive(wilson) {
-      width: 150px;
-    }
-    @include responsive(harding) {
-      width: 170px;
-    }
-  }
 }
 
 .pac-submit {
@@ -67,24 +50,7 @@
   margin: 24px 0 14px;
   padding: 6px 16px;
   transition: all 600ms ease-in-out;
-  .in-nav & {
-    position: absolute;
-    top: 7px;
-    right: 10px;
-  }
   &:hover {
     background: rgba(150, 150, 150, 1);
   }
 }
-
-// @media only screen and (min-width: 620px) {
-//   #pac-input {
-//     width: 300px;
-//   }
-// }
-
-// @media only screen and (min-width: 920px) {
-//   #pac-input {
-//     width: 400px;
-//   }
-// }

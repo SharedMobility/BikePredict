@@ -176,17 +176,6 @@ function initAutocomplete() {
           $("#t-rain-value").html(`${rain}%`);
           $("#t-uv-value").html(`${uv}`);
           $("#t-aqi-value").html(`${aqi}`);
-
-        //   $('#api_info').html(
-        //     `
-        //     <div class="component temp"><span>${temp}°F</span></div>
-        //     <div class="component humidity"><span>${humid}%</span></div>
-        //     <div class="component wind"><span>${wind} mph ${windDirection()}</span></div>
-        //     <div class="component rain"><span>${rain}%</span></div>
-        //     <div class="component uv"><span>${firstResponse[0].currently.uvIndex}<div class="uvmessage">${uviMessage()}</div></span></div>
-        //     <div class="component aqi"><span>${secondResponse[0].data.aqi}<div class="aqimessage">${aqiMessage()}</div></span></div>
-        //     `
-        //   )
         })
       })
   })
