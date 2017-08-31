@@ -69,18 +69,62 @@ main {
   position: relative;
   height: 300px;
   width: 100%;
+  z-index: 1;
+  &:after {
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    filter: blur(13px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
-// .stats {
-//   border: 1px solid orange;
-//   width: 50px;
-// }
+.stats {
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  width: 35%;
+}
+
+p {
+  .stats & {
+    font-size: 40px;
+    margin: 14px 0;
+  }
+}
+
+p {
+  .summary & {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.words {
+      display: none;
+}
+
 
 .summary {
-  border: 1px solid red;
-  display: inline-block;
-  height: 200px;
-  width: calc(100% - 200px);
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  width: 65%;
+}
+
+h4 {
+  .summary & {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
 }
 
 .aqi {
@@ -119,6 +163,11 @@ main {
   background-position: center center;
 }
 
+.nimg {
+  display: inline-block;
+  height: auto;
+  width: 80px;
+}
 // .aqimessage {
 //   padding-top: 5px;
 //   color: white;
