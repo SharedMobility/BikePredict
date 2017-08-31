@@ -75,13 +75,10 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
     map.setZoom(15);
+    $('html, body').animate({ scrollTop: $('main').offset().top - 20});
   
     const latVal = searchBox.getPlaces()[0].geometry.location.lat();
     const longVal = searchBox.getPlaces()[0].geometry.location.lng();
-
-    $("#api_info").show();
-    $("#t-map-title").removeClass('hidden');
-    google.maps.event.trigger(map, 'resize');
 
       var weatherCall =
         $.ajax({
@@ -170,6 +167,15 @@ function initAutocomplete() {
           const humid = Math.round(firstResponse[0].currently.humidity*100);
           const temp = Math.round(Number(firstResponse[0].currently.temperature));
           const wind = Math.round(firstResponse[0].currently.windSpeed);
+          const uv = Math.round(firstResponse[0].currently.uvIndex);
+          const aqi = Math.round(secondResponse[0].data.aqi);
+
+          $("#t-temp-value").html(`${temp}°F`);
+          $("#t-humid-value").html(`${humid}%`);
+          $("#t-wind-value").html(`${wind} mph ${windDirection()}`);
+          $("#t-rain-value").html(`${rain}%`);
+          $("#t-uv-value").html(`${uv}`);
+          $("#t-aqi-value").html(`${aqi}`);
 
         //   $('#api_info').html(
         //     `
