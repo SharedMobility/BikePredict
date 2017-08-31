@@ -176,6 +176,12 @@ function initAutocomplete() {
           $("#t-rain-value").html(`${rain}%`);
           $("#t-uv-value").html(`${uv}`);
           $("#t-aqi-value").html(`${aqi}`);
+          $("#t-temp-explanation").html("");
+          $("#t-humid-explanation").html("");
+          $("#t-wind-explanation").html("");
+          $("#t-rain-explanation").html("");
+          $("#t-uv-explanation").html("");
+          $("#t-aqi-explanation").html("");
         })
       })
   })

@@ -64,60 +64,182 @@ main {
 }
 
 .component {
+  background: crimson;
+  border-radius: 4px;
   color: white;
-  margin: 6px 0;
+  font-size: 1.5em;
+  font-family: "Enriqueta";
+  margin: 20px auto;
+  padding: 50px 10px;
   position: relative;
-  height: 300px;
-  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  width: 95%;
 }
+
+.component:before {
+  width: 100%;
+  color: darkblue;
+  font-size: 1.5em;
+  left: 0;
+  position: absolute;
+  top: 1%;
+  font-family: "IM Fell English";
+  font-weight: normal;
+  font-style: oblique;
+}
+
+.temp {
+  background:#1D5B7F;
+  border: 1px solid #1D5B7F;
+}
+
+.temp:before {
+    content: 'Temperature';
+}
+
+.humid {
+  background: #86D3FF;
+  border: 1px solid #86D3FF;
+}
+
+.humid:before {
+  content: 'Humidity';
+}
+
+.aqi {
+  background: #3AB7FF;
+  border: 1px solid #3AB7FF;
+}
+
+.aqi:before {
+  content: 'Aqi';
+}
+
+.uv {
+  background: #43697F;
+  border: 1px solid #43697F;
+}
+
+.uv:before {
+  content: 'UV Index';
+}
+
+.wind {
+  background: #6A777F;
+  border: 1px solid #6A777F;
+}
+
+.wind:before {
+  content: 'Wind Speed';
+}
+
+.rain {
+  background: #6485E8;
+  border: 1px solid #6485E8;
+}
+
+.rain:before {
+  content: 'Chance of Rain';
+}
+
+.aqimessage {
+  padding-top: 5px;
+  color: white;
+  font-family: "Enriqueta";
+  font-size: 15px;
+}
+
+.uvmessage {
+  padding-top: 5px;
+  color: white;
+  font-family: "Enriqueta";
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 620px) {
+  .component {
+    font-size: 1.5em;
+    float: left;
+    height: 250px;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 46%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  
+  .component {
+    margin-left: 3%;
+    width: 28%;
+  }
+  .aqimessage, .uvmessage {
+    font-size: 15px;
+  }
+  .rain, .uv, .aqi, {
+    height: 300px;
+  }
+}
+
+// .component {
+//   color: white;
+//   margin: 6px 0;
+//   position: relative;
+//   height: 300px;
+//   width: 100%;
+// }
 
 // .stats {
 //   border: 1px solid orange;
 //   width: 50px;
 // }
 
-.summary {
-  border: 1px solid red;
-  display: inline-block;
-  height: 200px;
-  width: calc(100% - 200px);
-}
+// .summary {
+//   border: 1px solid red;
+//   display: inline-block;
+//   height: 200px;
+//   width: calc(100% - 200px);
+// }
 
-.aqi {
-  background: url('../src/img/aqi-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .aqi {
+//   background: url('../src/img/aqi-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
-.humid {
-  background: url('../src/img/humid-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .humid {
+//   background: url('../src/img/humid-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
-.rain {
-  background: url('../src/img/rain-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .rain {
+//   background: url('../src/img/rain-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
-.temp {
-  background: url('../src/img/temp-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .temp {
+//   background: url('../src/img/temp-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
-.uv {
-  background: url('../src/img/uv-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .uv {
+//   background: url('../src/img/uv-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
-.wind {
-  background: url('../src/img/wind-component1.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+// .wind {
+//   background: url('../src/img/wind-component1.jpg');
+//   background-size: cover;
+//   background-position: center center;
+// }
 
 // .aqimessage {
 //   padding-top: 5px;
