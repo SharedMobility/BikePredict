@@ -2,6 +2,10 @@
   "name": "aqi",
   "version": "1.0.0",
   "description": "http://i.imgur.com/u5nrMC9.png  #Intro page.  Put a location (zip code, city, country, etc) into the search.",
+  "engines": {
+    "node": "6.11.2",
+    "npm": "3.10.x"
+  },
   "main": "app.js",
   "scripts": {
     "start": "server.js",
