@@ -72,6 +72,7 @@ main {
   margin: 20px auto;
   padding: 50px 10px;
   position: relative;
+<<<<<<< HEAD
   text-align: center;
   box-sizing: border-box;
   width: 95%;
@@ -133,6 +134,70 @@ main {
   @media only screen and (min-width: 920px) {
     margin-left: 3%;
     width: 28%;
+=======
+  height: 300px;
+  width: 100%;
+  z-index: 1;
+  &:after {
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    filter: blur(13px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  @include responsive(hoover) {
+    font-size: 1em;
+    float: left;
+    margin: 2% 2%;
+    width: 45%
+  }
+  @media only screen and (min-width: 920px) {
+    margin-left: 3%;
+    width: 28%;
+  }
+}
+
+.stats {
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  width: 35%;
+}
+
+p {
+  .stats & {
+    font-size: 40px;
+    margin: 14px 0;
+  }
+}
+
+p {
+  .summary & {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.summary {
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  width: 65%;
+}
+
+h4 {
+  .summary & {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 14px;
+>>>>>>> components-with-bikes
   }
 }
 
@@ -172,6 +237,7 @@ main {
   }
 }
 
+<<<<<<< HEAD
 // .component {
 //   color: white;
 //   margin: 6px 0;
@@ -228,6 +294,13 @@ main {
 //   background-position: center center;
 // }
 
+=======
+.nimg {
+  display: inline-block;
+  height: auto;
+  width: 80px;
+}
+>>>>>>> components-with-bikes
 // .aqimessage {
 //   padding-top: 5px;
 //   color: white;
