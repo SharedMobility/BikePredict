@@ -238,8 +238,9 @@ function initAutocomplete() {
           $("#t-humidity-value").html(`${humid}%`);
           $("#t-wind-value").html(`${wind} mph`);
           $("#t-rain-value").html(`${rain}%`);
-          $("#t-uv-value").html(`${uv} out of 11`);
+          $("#t-uv-value").html(`${uv}`);
           $("#t-aqi-value").html(`${aqi}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
           $("#t-explanation").html(
             `
@@ -248,6 +249,8 @@ function initAutocomplete() {
             `
           );
 =======
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
           $("#t-temp-explanation").html(`${tempMessage()}`);
           $("#t-humid-explanation").html(`${humidityMessage()}`);
           $("#t-wind-explanation").html(
@@ -260,8 +263,12 @@ function initAutocomplete() {
           $("#t-rain-explanation").html(`${firstResponse["0"].hourly.summary}`);
           $("#t-uv-explanation").html(`${uviMessage()}`);
           $("#t-aqi-explanation").html(`<p>${aqiMessage()}</p>`);
+<<<<<<< HEAD
 >>>>>>> components-with-bikes
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
         })
       })
   })
 }
+

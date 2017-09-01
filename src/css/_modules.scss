@@ -63,6 +63,7 @@ main {
   display: block;
 }
 
+<<<<<<< HEAD
 .explanation {
   background: #6C7F6D;
   border-radius: 4px;
@@ -101,15 +102,13 @@ main {
   }
 }
 
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
 .component {
-  background: #549957;
-  border-radius: 4px;
   color: white;
-  font-size: 1.5em;
-  font-family: "Enriqueta";
-  margin: 20px auto;
-  padding: 50px 10px;
+  margin: 6px 0;
   position: relative;
+<<<<<<< HEAD
   text-align: center;
   box-sizing: border-box;
   width: 95%;
@@ -135,6 +134,8 @@ main {
     margin-left: 3%;
     width: 28%;
 =======
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
   height: 300px;
   width: 100%;
   z-index: 1;
@@ -197,46 +198,50 @@ h4 {
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 14px;
+<<<<<<< HEAD
 >>>>>>> components-with-bikes
-  }
-}
-
-.temp {
-  &:before {
-    content: 'Temperature';
-  }
-}
-
-.humid {
-  &:before {
-    content: 'Humidity';
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
   }
 }
 
 .aqi {
-  &:before {
-    content: 'Air Quality Index';
-  }
+  background: url('../src/img/aqi-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
-.uv {
-  &:before {
-    content: 'UV Index';
-  }
-}
-
-.wind {
-  &:before {
-    content: 'Wind Speed';
-  }
+.humid {
+  background: url('../src/img/humid-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .rain {
-  &:before {
-    content: 'Chance of Rain';
-  }
+  background: url('../src/img/rain-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
+.temp {
+  background: url('../src/img/temp-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.uv {
+  background: url('../src/img/uv-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.wind {
+  background: url('../src/img/wind-component1.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 // .component {
 //   color: white;
@@ -295,10 +300,13 @@ h4 {
 // }
 
 =======
+=======
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
 .nimg {
   display: inline-block;
   height: auto;
   width: 80px;
+<<<<<<< HEAD
 }
 >>>>>>> components-with-bikes
 // .aqimessage {
@@ -314,3 +322,6 @@ h4 {
 //   font-family: "Enriqueta";
 //   font-size: 15px;
 // }
+=======
+}
+>>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
