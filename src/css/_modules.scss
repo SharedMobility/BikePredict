@@ -83,6 +83,16 @@ main {
     width: 100%;
     z-index: -1;
   }
+  @include responsive(hoover) {
+    font-size: 1em;
+    float: left;
+    margin: 2% 2%;
+    width: 45%
+  }
+  @media only screen and (min-width: 920px) {
+    margin-left: 3%;
+    width: 28%;
+  }
 }
 
 .stats {
@@ -107,11 +117,6 @@ p {
   }
 }
 
-.words {
-      display: none;
-}
-
-
 .summary {
   float: left;
   height: 100%;
@@ -122,7 +127,7 @@ p {
 h4 {
   .summary & {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 14px;
   }
 }
