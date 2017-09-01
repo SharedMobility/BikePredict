@@ -32,40 +32,66 @@
         </div> 
     <div class="y-wrap">
       <div class="component temp">
-        <p>Icon</p>
-        <p id="t-temp-value">78°F</p>
-        <!-- <p id="t-temp-explanation">Check the temperature of your biking location.</p> -->
+        <div class="stats"> 
+          <div class="nimg"><img src ="../src/img/temp.svg"></div>
+          <p id="t-temp-value">78°F</p>
+        </div>
+        <div class="summary">
+          <h4>Temperature</h4>
+          <p id="t-temp-explanation">Bike Predict will check the temperature of your biking location.  </p>
+        </div>
       </div>
       <div class = "component humid">
-        <p>Icon</p>
-        <p id="t-humid-value">42%</p>
-        <!-- <p id="t-humid-explanation">Check the relative humidity of your biking location.</p> -->
+          <div class="stats"> 
+            <div class="nimg"><img src ="../src/img/humidity.svg"></div>
+            <p id="t-humidity-value">32%</p>
+          </div>
+          <div class="summary">
+            <h4>Humidity</h4>
+            <p id="t-humid-explanation">Bike Predict will check the relative humidity of your biking location.</p>
+          </div>
       </div>
       <div class="component wind">
-        <p>Icon</p>
-        <p id="t-wind-value">2 mph N</p>
-        <!-- <p id="t-wind-explanation"><a href="http://snowfence.umn.edu/Components/winddirectionanddegreeswithouttable3.htm">Learn more about wind direction here.</a></p> -->
+          <div class="stats"> 
+            <div class="nimg"><img src ="../src/img/wind.svg"></div>
+            <p id="t-wind-value">4 mph</p>
+          </div>
+          <div class="summary">
+            <h4>Wind Speed</h4>
+            <p id="t-wind-explanation">Bike Predict will check the wind speed and wind direction.</p>
+          </div>
       </div>
       <div class="component rain">
-        <p>Icon</p>
-        <p id="t-rain-value">23%</p>
-        <!-- <p id="t-rain-explanation">Describes the chance of precipitation occuring at any point you select in the area.</p> -->
+          <div class="stats"> 
+            <div class="nimg"><img src ="../src/img/rain.svg"></div>
+            <p id="t-rain-value">26%</p>
+          </div>
+          <div class="summary">
+            <h4>Chance of Rain</h4>
+            <p id="t-rain-explanation">Describes the chance of precipitation occuring at any point you select in the area.</p>
+          </div>
       </div>
       <div class="component uv">
-        <p>Icon</p>
-        <p id="t-uv-value">3 out of 11</p>
-        <!-- <p id="t-uv-explanation">Check the UV Index of your biking location.</p> -->
+          <div class="stats"> 
+            <div class="nimg"><img src ="../src/img/uv.svg"></div>
+            <p id="t-uv-value">3</p>
+          </div>
+          <div class="summary">
+            <h4>UV Index</h4>
+            <p id="t-uv-explanation">Bike Predict will check the UV Index of your biking location.</p>
+          </div>
       </div>
       <div class="component aqi">
-        <p>Icon</p>
-        <p id="t-aqi-value">45</p>
-        <!-- <p id="t-aqi-explanation">AQI is measured from a scale of 0 to 500.</p> -->
-      </div>
-      <div class="explanation" id="t-explanation">
-        <p>Check out forecast information to see if today is a good day to bike.</p>
+          <div class="stats"> 
+            <div class="nimg"><img src ="../src/img/quality.svg"></div>
+            <p id="t-aqi-value">26</p>
+          </div>
+          <div class="summary">
+            <h4>AQI</h4>
+            <p id="t-aqi-explanation">The Air Quality Index is measured from a scale of 0 to 500.</p>
+          </div>
       </div>
     </div>
-    
     </main>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>
