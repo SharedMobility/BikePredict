@@ -214,6 +214,25 @@ function initAutocomplete() {
             return "Outdoor relative humidity levels are high. Expect a lot of moisture in the air."
           }
         };
+
+        function tempMessage() {if (firstResponse[0].currently.temperature <= 25) {
+          return "Recommended clothes to wear: winter bib tights; long-sleeve heavy wicking full turtleneck undershirt, long-sleeve jersey and lined cycling jacket; mittens or lobster claw gloves; balaclava; winter cycling shoes, wool socks, plastic bag, charcoal toe warmers."
+        } else if (firstResponse[0].currently.temperature <= 30) {
+          return "Recommended clothes to wear: heavyweight tights; long-sleeve heavy wicking turtleneck undershirt and heavy cycling jacket; heavy-weight gloves; lined skullcap; winter cycling shoes, shoe covers, wool socks with charcoal toe warmers."
+        } else if (firstResponse[0].currently.temperature <= 35) {
+          return "Recommended clothes to wear: Heavyweight tights; long-sleeve heavy wicking turtleneck undershirt and heavy cycling jacket; heavy-weight gloves; headband covering ears;  winter cycling shoes, shoe covers, wool socks with charcoal toe warmers."
+        } else if (firstResponse[0].currently.temperature <= 40) {
+          return "Recommended clothes to wear: Tights or leg warmers; long-sleeve heavy mock turtleneck (I like Under Armour) and lined cycling jacket; medium-weight gloves; headband covering ears;  winter cycling shoes, shoe covers, wool socks."
+        } else if (firstResponse[0].currently.temperature <= 45) {
+          return "Recommended clothes to wear: Tights or leg warmers; long-sleeve wicking undershirt and lined cycling jacket;  thin full-fingered gloves; headband covering ears; wool socks and shoe covers."
+        } else if (firstResponse[0].currently.temperature <= 50) {
+          return "Recommended clothes to wear: Tights or leg warmers; heavy long-sleeve jersey with sleeveless or short-sleeve wicking undershirt; or lightweight long-sleeve jersey with long-sleeve undershirt."
+        } else if (firstResponse[0].currently.temperature <= 60) {
+          return "Recommended clothes to wear: Shorts and long-sleeve jersey or long-sleeve thin undershirt."
+        } else {
+          return "Recommended clothes to wear: Shorts and short-sleeve jersey. "
+        }
+      };
  
           $("#t-temp-value").html(`${temp}°F`);
           $("#t-humidity-value").html(`${humid}%`);
@@ -221,7 +240,7 @@ function initAutocomplete() {
           $("#t-rain-value").html(`${rain}%`);
           $("#t-uv-value").html(`${uv}`);
           $("#t-aqi-value").html(`${aqi}`);
-          $("#t-temp-explanation").html(``);
+          $("#t-temp-explanation").html(`${tempMessage()}`);
           $("#t-humid-explanation").html(`${humidityMessage()}`);
           $("#t-wind-explanation").html(
             `
@@ -230,7 +249,7 @@ function initAutocomplete() {
             <p>Coming from the direction of ${windDirection()}.</p>
             `
           );
-          $("#t-rain-explanation").html(``);
+          $("#t-rain-explanation").html(`${firstResponse["0"].hourly.summary}`);
           $("#t-uv-explanation").html(`${uviMessage()}`);
           $("#t-aqi-explanation").html(`<p>${aqiMessage()}</p>`);
         })
