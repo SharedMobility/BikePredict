@@ -15,44 +15,44 @@
 //----------------------------------------------------------------------------
 
 header {
-    background-image: url('../src/img/bike-background2.jpg');
-    background-attachment: scroll;
-    background-position: center center;
-    width: 100%;
+  background-image: url('../src/img/bike-background2.jpg');
+  background-attachment: scroll;
+  background-position: center center;
+  width: 100%;
 }
 .header_content {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
+color: rgba(255, 255, 255, 1);
+height: auto;
+position: absolute;
+right: 50%;
+text-align: center;
+top: 50%;
+transform: translate(50%, -50%);
+width: 260px;
+@include responsive(coolidge) {
+  width: 400px;
+}
+@include responsive(nixon) {
+  width: 650px;
+}
+&:after {
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+  height: 120%;
+  // left: -10%;
   position: absolute;
-  right: 50%;
-  text-align: center;
-  top: 50%;
-  transform: translate(50%, -50%);
-  width: 260px;
-  @include responsive(coolidge) {
-    width: 400px;
-  }
-  @include responsive(nixon) {
-    width: 650px;
-  }
-  &:after {
-    background: rgba(0, 0, 0, 0.3);
-    content: "";
-    height: 120%;
-    // left: -10%;
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: 120%;
-    z-index: -1;
-  }
+  left: -10%;
+  top: -10%;
+  width: 120%;
+  z-index: -1;
+}
 }
 
 p {
-  .header_content & {
-    font-size: 1.5rem;
-    text-align: center;
-  }
+.header_content & {
+  font-size: 1.5rem;
+  text-align: center;
+}
 }
 
 
@@ -60,268 +60,116 @@ p {
 //  MAIN
 //----------------------------------------------------------------------------
 main {
-  display: block;
+display: block;
 }
 
-<<<<<<< HEAD
-.explanation {
-  background: #6C7F6D;
-  border-radius: 4px;
-  color: white;
-  font-size: 1.5em;
-  font-family: "Enriqueta";
-  margin: 20px auto;
-  padding: 50px 10px;
-  position: relative;
-<<<<<<< HEAD
-  text-align: center;
-  box-sizing: border-box;
-  width: 95%;
-  @include responsive(hoover) {
-    font-size: 1.5em;
-    float: left;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 95.5%;
-  }
-  @media only screen and (min-width: 920px) {
-    margin-left: 3%;
-    width: 94%;
-  }
-  &:before {
-    content: "Explanation";
-    width: 100%;
-    color: darkblue;
-    font-size: 1.2em;
-    left: 0;
-    position: absolute;
-    top: 1%;
-    font-family: "IM Fell English";
-    font-weight: normal;
-    font-style: oblique;
-  }
-}
-
-=======
->>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
 .component {
-  color: white;
-  margin: 6px 0;
-  position: relative;
-<<<<<<< HEAD
-  text-align: center;
-  box-sizing: border-box;
-  width: 95%;
-  &:before {
-    width: 100%;
-    color: darkblue;
-    font-size: 1.2em;
-    left: 0;
-    position: absolute;
-    top: 1%;
-    font-family: "IM Fell English";
-    font-weight: normal;
-    font-style: oblique;
-  }
-  @include responsive(hoover) {
-    font-size: 1.5em;
-    float: left;
-    margin-right: 2%;
-    margin-left: 2%;
-    width: 46%;
-  }
-  @media only screen and (min-width: 920px) {
-    margin-left: 3%;
-    width: 28%;
-=======
-=======
->>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
-  height: 300px;
+color: white;
+margin: 6px 0;
+position: relative;
+height: 300px;
+width: 100%;
+z-index: 1;
+&:after {
+  background: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  filter: blur(13px);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
-  z-index: 1;
-  &:after {
-    background: rgba(0, 0, 0, 0.6);
-    background-size: cover;
-    background-repeat: no-repeat;
-    content: "";
-    filter: blur(13px);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  @include responsive(hoover) {
-    font-size: 1em;
-    float: left;
-    margin: 2% 2%;
-    width: 45%
-  }
-  @media only screen and (min-width: 920px) {
-    margin-left: 3%;
-    width: 28%;
-  }
+  z-index: -1;
+}
+@include responsive(hoover) {
+  font-size: 1em;
+  float: left;
+  margin: 2% 2%;
+  width: 45%
+}
+@media only screen and (min-width: 920px) {
+  margin-left: 3%;
+  width: 28%;
+}
 }
 
 .stats {
-  float: left;
-  height: 100%;
-  padding: 20px 10px;
-  text-align: center;
-  width: 35%;
+float: left;
+height: 100%;
+padding: 20px 10px;
+text-align: center;
+width: 35%;
 }
 
 p {
-  .stats & {
-    font-size: 40px;
-    margin: 14px 0;
-  }
+.stats & {
+  font-size: 40px;
+  margin: 14px 0;
+}
 }
 
 p {
-  .summary & {
-    font-size: 18px;
-    line-height: 22px;
-  }
+.summary & {
+  font-size: 18px;
+  line-height: 22px;
+}
 }
 
 .summary {
-  float: left;
-  height: 100%;
-  padding: 20px 10px;
-  width: 65%;
+float: left;
+height: 100%;
+padding: 20px 10px;
+width: 65%;
 }
 
 h4 {
-  .summary & {
-    text-transform: uppercase;
-    font-size: 18px;
-    margin-bottom: 14px;
-<<<<<<< HEAD
->>>>>>> components-with-bikes
-=======
->>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
-  }
+.summary & {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
 }
 
 .aqi {
-  background: url('../src/img/aqi-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/aqi-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
 .humid {
-  background: url('../src/img/humid-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/humid-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
 .rain {
-  background: url('../src/img/rain-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/rain-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
 .temp {
-  background: url('../src/img/temp-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/temp-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
 .uv {
-  background: url('../src/img/uv-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/uv-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
 .wind {
-  background: url('../src/img/wind-component1.jpg');
-  background-size: cover;
-  background-position: center center;
+background: url('../src/img/wind-component1.jpg');
+background-size: cover;
+background-position: center center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// .component {
-//   color: white;
-//   margin: 6px 0;
-//   position: relative;
-//   height: 300px;
-//   width: 100%;
-// }
-
-// .stats {
-//   border: 1px solid orange;
-//   width: 50px;
-// }
-
-// .summary {
-//   border: 1px solid red;
-//   display: inline-block;
-//   height: 200px;
-//   width: calc(100% - 200px);
-// }
-
-// .aqi {
-//   background: url('../src/img/aqi-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-// .humid {
-//   background: url('../src/img/humid-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-// .rain {
-//   background: url('../src/img/rain-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-// .temp {
-//   background: url('../src/img/temp-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-// .uv {
-//   background: url('../src/img/uv-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-// .wind {
-//   background: url('../src/img/wind-component1.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
-
-=======
-=======
->>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
 .nimg {
-  display: inline-block;
-  height: auto;
-  width: 80px;
-<<<<<<< HEAD
+display: inline-block;
+height: auto;
+width: 80px;
 }
->>>>>>> components-with-bikes
-// .aqimessage {
-//   padding-top: 5px;
-//   color: white;
-//   font-family: "Enriqueta";
-//   font-size: 15px;
-// }
-
-// .uvmessage {
-//   padding-top: 5px;
-//   color: white;
-//   font-family: "Enriqueta";
-//   font-size: 15px;
-// }
-=======
-}
->>>>>>> 7a337fc34e3128518ae35ee10261b05d3258a840
