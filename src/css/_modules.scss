@@ -21,31 +21,31 @@ header {
   width: 100%;
 }
 .header_content {
-color: rgba(255, 255, 255, 1);
-height: auto;
-position: absolute;
-right: 50%;
-text-align: center;
-top: 50%;
-transform: translate(50%, -50%);
-width: 260px;
-@include responsive(coolidge) {
-  width: 400px;
-}
-@include responsive(nixon) {
-  width: 650px;
-}
-&:after {
-  background: rgba(0, 0, 0, 0.3);
-  content: "";
-  height: 120%;
-  // left: -10%;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
   position: absolute;
-  left: -10%;
-  top: -10%;
-  width: 120%;
-  z-index: -1;
-}
+  right: 50%;
+  text-align: center;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 260px;
+  @include responsive(coolidge) {
+    width: 400px;
+  }
+  @include responsive(nixon) {
+    width: 650px;
+  }
+  &:after {
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 120%;
+    // left: -10%;
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    z-index: -1;
+  }
 }
 
 p {
@@ -64,112 +64,112 @@ display: block;
 }
 
 .component {
-color: white;
-margin: 6px 0;
-position: relative;
-height: 300px;
-width: 100%;
-z-index: 1;
-&:after {
-  background: rgba(0, 0, 0, 0.6);
-  background-size: cover;
-  background-repeat: no-repeat;
-  content: "";
-  filter: blur(13px);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
+  color: white;
+  margin: 6px 0;
+  position: relative;
+  height: 300px;
   width: 100%;
-  z-index: -1;
-}
-@include responsive(hoover) {
-  font-size: 1em;
-  float: left;
-  margin: 2% 2%;
-  width: 45%
-}
-@media only screen and (min-width: 920px) {
-  margin-left: 3%;
-  width: 28%;
-}
+  z-index: 1;
+  &:after {
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    filter: blur(13px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  @include responsive(hoover) {
+    font-size: 1em;
+    float: left;
+    margin: 2% 2%;
+    width: 45%
+  }
+  @media only screen and (min-width: 920px) {
+    margin-left: 3%;
+    width: 28%;
+  }
 }
 
 .stats {
-float: left;
-height: 100%;
-padding: 20px 10px;
-text-align: center;
-width: 35%;
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  width: 35%;
 }
 
 p {
-.stats & {
-  font-size: 40px;
-  margin: 14px 0;
-}
+  .stats & {
+    font-size: 40px;
+    margin: 14px 0;
+  }
 }
 
 p {
-.summary & {
-  font-size: 18px;
-  line-height: 22px;
-}
+  .summary & {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .summary {
-float: left;
-height: 100%;
-padding: 20px 10px;
-width: 65%;
+  float: left;
+  height: 100%;
+  padding: 20px 10px;
+  width: 65%;
 }
 
 h4 {
-.summary & {
-  text-transform: uppercase;
-  font-size: 18px;
-  margin-bottom: 14px;
-}
+  .summary & {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
 }
 
 .aqi {
-background: url('../src/img/aqi-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/aqi-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .humid {
-background: url('../src/img/humid-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/humid-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .rain {
-background: url('../src/img/rain-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/rain-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .temp {
-background: url('../src/img/temp-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/temp-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .uv {
-background: url('../src/img/uv-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/uv-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .wind {
-background: url('../src/img/wind-component1.jpg');
-background-size: cover;
-background-position: center center;
+  background: url('../src/img/wind-component1.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 .nimg {
-display: inline-block;
-height: auto;
-width: 80px;
+  display: inline-block;
+  height: auto;
+  width: 80px;
 }
