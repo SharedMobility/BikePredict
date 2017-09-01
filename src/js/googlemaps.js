@@ -216,7 +216,7 @@ function initAutocomplete() {
         };
 
         function tempMessage() {if (firstResponse[0].currently.temperature <= 25) {
-          return "Recommended clothes to wear: winter bib tights; long-sleeve heavy wicking full turtleneck undershirt, long-sleeve jersey and lined cycling jacket; mittens or lobster claw gloves; balaclava; winter cycling shoes, wool socks, plastic bag, charcoal toe warmers."
+          return "Recommended clothes to wear: winter bib tights; long-sleeve heavy wicking full turtleneck undershirt, long-sleeve jersey and lined cycling jacket; mittens or lobster claw gloves; balaclava; winter cycling shoes, wool socks with charcoal toe warmers."
         } else if (firstResponse[0].currently.temperature <= 30) {
           return "Recommended clothes to wear: heavyweight tights; long-sleeve heavy wicking turtleneck undershirt and heavy cycling jacket; heavy-weight gloves; lined skullcap; winter cycling shoes, shoe covers, wool socks with charcoal toe warmers."
         } else if (firstResponse[0].currently.temperature <= 35) {

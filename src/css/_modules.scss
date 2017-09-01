@@ -113,8 +113,17 @@ p {
 p {
   .summary & {
     font-family: "Enriqueta";
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22px;
+    .aqi & { 
+      font-size: 14px;
+    }
+    .wind & { 
+      font-size: 14px;
+    }
+    .temp & { 
+      font-size: 14px;
+    }
   }
 }
 
