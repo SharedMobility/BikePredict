@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Know before you go. Check air quality and other weather conditions with Bike Predict to get the most out of your ride." />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600-IM+Fell+English:italic-Enriqueta:regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English:italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta:regular" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="y-wrap modified" id="t-y-wrap">
         <div id="t-header" class="header_content">
           <h1>Bike Predict</h1>
-          <p>Bike Predict gives bike path, air quality, and weather information about specified locations.</p>
-          <input id="pac-input" class="controls" type="text" placeholder="Search a street or a city to begin!">
+          <p>Bike Predict gives bike path, air quality, and weather information about specified locations. Enter your search by street or city below.</p>
+          <input id="pac-input" class="controls" type="text" placeholder="">
           <button id="t-pac-submit" class="pac-submit" type='submit'>Search</button>
         </div>
       </div>
@@ -30,7 +32,7 @@
                 <div class="dirt">Dirt/unpaved trails</div>
             </div>
         </div> 
-    <div class="y-wrap">
+    <div class="y-wrap cf">
       <div class="component temp">
         <div class="stats"> 
           <div class="nimg"><img src ="../src/img/temp.svg"></div>
@@ -93,10 +95,11 @@
       </div>
     </div>
     </main>
+    <footer><div class="y-wrap"><span id="t-modal">Credits</span></div></footer>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbLOcCVgOuopEQ7ujuxOQdDZ3OQbZIWk&libraries=places&callback=initAutocomplete" defer></script>
     <script type="text/javascript" src="src/js/googlemaps.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="src/js/sizer.js"></script>
+    <!-- <script type="text/javascript" src="src/js/sizer.js"></script> -->
   </body>
 </html>

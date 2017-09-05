@@ -11,7 +11,7 @@ a {
   //----------------------------------------------------------------------------
   body {
     // background: #D5AD94;
-    font-family: "Enriqueta";
+    font-family: Arial;
     font-weight: normal;
     font-style: normal;
     position: relative;
@@ -112,7 +112,7 @@ a {
   //  Paragraph
   //----------------------------------------------------------------------------
   p {
-  
+    font-family: "Enriqueta";
   }
   
   p + p {
@@ -136,9 +136,19 @@ a {
   }
   
   footer {
-  
+    background: gray;
+    color: white;
+    padding: 20px 12px;
+    text-align: center;
   }
   
+  span {
+    footer & {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
   header {
   
   }

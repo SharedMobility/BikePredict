@@ -45,12 +45,14 @@
 }
 
 .pac-submit {
-  background: rgba(200, 200, 200, 1);
+  background: rgb(47, 119, 163);
   border: none;
-  margin: 24px 0 14px;
-  padding: 6px 16px;
+  color: white;
+  font-size: 24px;
+  margin: 24px 14px;
+  padding: 10px 24px;
   transition: all 600ms ease-in-out;
   &:hover {
-    background: rgba(150, 150, 150, 1);
+    background: rgba(47, 105, 163, 1);
   }
 }

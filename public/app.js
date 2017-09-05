@@ -3,14 +3,13 @@
   var app = {
 
     init: function() {
-      //app.isPage()
+      app.toggleModal()
     },
 
-    isPage: function() {
-      let count = $('#t-search-count').val();
-      if(count != 0) {
-        $('#pac-input').addClass('in-nav');
-      }
+    toggleModal: function() {
+      $("#t-modal").on("click", function() {
+        alert("Hello World");
+      })
     }
 
   };
