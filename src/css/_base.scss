@@ -104,7 +104,9 @@ a {
   }
   
   ul {
-  
+    list-style-type: square;
+    margin-left: 10%;
+    margin-top: 10px;
   }
   
   
@@ -136,8 +138,8 @@ a {
   }
   
   footer {
-    background: gray;
-    color: white;
+    background: #e6eadf;
+    color: black;
     padding: 20px 12px;
     text-align: center;
   }
