@@ -115,6 +115,23 @@ div {
   }
 }
 
+// #myModal {
+//   height: 0;
+//   left: 50%;
+//   max-height: 1000px;
+//   overflow: hidden;
+//   position: absolute;
+//   transform: translate(-50%, -50%);
+//   top: 50%;
+//   width: 600px;
+//   z-index: 100;
+//   @include transition($animate * 2);
+//   &.active {
+//     height: 100%;
+//     overflow: visible;
+//   }
+// }
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

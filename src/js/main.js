@@ -12,13 +12,16 @@
 
       $("#t-modal").on("click", function() {
         modal.style.display = "block";
+        $('html').toggleClass('disable');
       })
       span.onclick = function() {
         modal.style.display = "none";
+        $('html').toggleClass('disable');
       }
       window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            $('html').toggleClass('disable');
         }
       }
     }
