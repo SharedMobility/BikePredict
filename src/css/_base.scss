@@ -15,6 +15,9 @@ a {
     font-weight: normal;
     font-style: normal;
     position: relative;
+    &.disable {
+      overflow: hidden;
+    }
   }
   
   // @media only screen and (min-width: 620px) {
@@ -70,9 +73,6 @@ a {
   //----------------------------------------------------------------------------
   html {
     height: 100%;
-    &.disable {
-      overflow: hidden;
-    }
   }
   
   
