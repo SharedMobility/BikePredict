@@ -15,7 +15,7 @@
 //----------------------------------------------------------------------------
 
 header {
-  background-image: url('../src/img/bike-background2.jpg');
+  background-image: url('../src/img/bike-background.jpg');
   background-attachment: scroll;
   background-position: center center;
   width: 100%;
@@ -26,7 +26,7 @@ header {
   position: absolute;
   right: 50%;
   text-align: center;
-  top: 50%;
+  top: 40%;
   transform: translate(50%, -50%);
   width: 260px;
   @include responsive(coolidge) {
@@ -36,7 +36,7 @@ header {
     width: 650px;
   }
   &:after {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     content: "";
     height: 120%;
     // left: -10%;
