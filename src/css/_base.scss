@@ -15,6 +15,7 @@ a {
     font-weight: normal;
     font-style: normal;
     position: relative;
+    overflow: scroll;
     &.disable {
       overflow: hidden;
     }
