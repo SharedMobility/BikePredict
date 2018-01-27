@@ -21,7 +21,7 @@ Then open [`localhost:3002`](http://localhost:8000) in a browser.
   <li>CSS3</li>
   <li>JavaScript</li>
   <li>jQuery</li>
-  <li>Dark Skies API</li>
-  <li>Google Maps API</li>
-  <li>AQI.cn API</li>  
+  <li><a href="https://darksky.net/dev/docs">Dark Skies API</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps API</a></li>
+  <li><a href="http://aqicn.org/api/">AQI.cn API</a></li>
 </ul>
