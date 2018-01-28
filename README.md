@@ -13,7 +13,7 @@ and air quality information. </p>
 ```
 >   npm start
 ```
-Then open [`localhost:3002`](http://localhost:8000) in a browser.
+Then open [`localhost:3002`](http://localhost:3002) in a browser.
 
 <h2>Technology</h2>
 <ul>
