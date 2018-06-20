@@ -105,11 +105,9 @@ function initAutocomplete() {
           const humid = Math.round(firstResponse[0].currently.humidity*100);
           const temp = Math.round(Number(firstResponse[0].currently.temperature));
           const wind = Math.round(firstResponse[0].currently.windSpeed);
-          const wind_gust = firstResponse["0"].currently.windGust;
           const wind_bearing = firstResponse[0].currently.windBearing;
           const uv = Math.round(firstResponse[0].currently.uvIndex);
           const aqi = Math.round(secondResponse[0].data.aqi);
-          const aqi_updated_time = secondResponse["0"].data.time.s;
 
           function aqiMessage() {if (secondResponse[0].data.aqi <= 50) {
               return "Air quality is considered satisfactory, and air pollution poses little or no risk."
