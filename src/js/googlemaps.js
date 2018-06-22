@@ -1,37 +1,24 @@
 function initAutocomplete() {
   $(function(){
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 47.6147, lng: -122},
-    zoom: 13,
-    disableDefaultUI: true,
-    mapTypeId: 'terrain',
-  });
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 47.6147, lng: -122},
+      zoom: 13,
+      disableDefaultUI: true,
+      mapTypeId: 'terrain',
+    });
+    var input = document.getElementById('pac-input');
+    var searchBox = new google.maps.places.SearchBox(input);
+    var bikeLayer = new google.maps.BicyclingLayer();
+    var markers = [];
 
-  // Create the search box and link it to the UI element.
-  var input = document.getElementById('pac-input');
-  var searchBox = new google.maps.places.SearchBox(input);
+    bikeLayer.setMap(map);
 
-  var bikeLayer = new google.maps.BicyclingLayer();
-  bikeLayer.setMap(map);
+    map.addListener('bounds_changed', function() {
+      searchBox.setBounds(map.getBounds());
+    });
 
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
-  });
-
-  var markers = [];
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  var input = document.getElementById('pac-input');
-  var header = document.getElementById('t-header');
-  document.getElementById('t-pac-submit').onclick = function () {
-    google.maps.event.trigger(input, 'focus')
-    google.maps.event.trigger(input, 'keydown', { keyCode: 13 });
-  };
-
-  searchBox.addListener('places_changed', function() {
-
-    var places = searchBox.getPlaces();
+    searchBox.addListener('places_changed', function() {
+      var places = searchBox.getPlaces();
 
     if (places.length == 0) {
       return;
