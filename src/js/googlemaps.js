@@ -107,9 +107,13 @@ function initAutocomplete() {
           const wind = Math.round(firstResponse[0].currently.windSpeed);
           const wind_bearing = firstResponse[0].currently.windBearing;
           const uv = Math.round(firstResponse[0].currently.uvIndex);
-          const aqi = Math.round(secondResponse[0].data.aqi);
+          // const aqi = Math.round(secondResponse[0].data.aqi);
+          // const aqiError = "N/A";
 
-          function aqiMessage() {if (secondResponse[0].data.aqi <= 50) {
+          function aqiMessage() {
+            if (secondResponse[0].data === null) {
+              return "World Air Quality API is currently experiencing an issue, please attempt the search again or refresh the page."
+            } else if (secondResponse[0].data.aqi <= 50) {
               return "Air quality is considered satisfactory, and air pollution poses little or no risk."
             } else if (secondResponse[0].data.aqi <= 100) {
               return "Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
@@ -123,7 +127,8 @@ function initAutocomplete() {
               return "Air quality is acutely dangerous.  Health alert: everyone may experience more serious health effects."}
           };
 
-          function uviMessage() {if (firstResponse[0].currently.uvIndex <= 2) {
+          function uviMessage() {
+            if (firstResponse[0].currently.uvIndex <= 2) {
               return "Low danger from the sun's UV rays for the average person."
             } else if (firstResponse[0].currently.uvIndex <= 5) {
               return "Moderate risk of harm from unprotected sun exposure."
@@ -135,7 +140,8 @@ function initAutocomplete() {
               return "Extreme risk of harm from unprotected sun exposure. Take all precautions because unprotected skin and eyes can burn in minutes. "}
           };
 
-          function windMessage() {if (firstResponse[0].currently.windSpeed < 1) {
+          function windMessage() {
+            if (firstResponse[0].currently.windSpeed < 1) {
             return "Conditions are best described as calm. Smoke rises vertically."
           } else if (firstResponse[0].currently.windSpeed <= 3) {
             return "Conditions are best described as light. Wind motion visible in smoke."
@@ -164,7 +170,8 @@ function initAutocomplete() {
           }
         };
 
-          function windDirection() {if (firstResponse[0].currently.windBearing <= 11.25) {
+          function windDirection() {
+            if (firstResponse[0].currently.windBearing <= 11.25) {
               return "N"
             } else if (wind_bearing <= 33.75) {
               return "NNE"
@@ -200,7 +207,8 @@ function initAutocomplete() {
               return "N"}
           };
 
-        function humidityMessage() {if (firstResponse[0].currently.humidity <= .20) {
+        function humidityMessage() {
+          if (firstResponse[0].currently.humidity <= .20) {
             return "Outdoor relative humidity levels are extremely low. Expect dry air."
           } else if (firstResponse[0].currently.humidity <= .45) {
             return "Outdoor relative humidity levels are acceptable."
@@ -213,7 +221,8 @@ function initAutocomplete() {
           }
         };
 
-        function tempMessage() {if (firstResponse[0].currently.temperature <= 25) {
+        function tempMessage() {
+          if (firstResponse[0].currently.temperature <= 25) {
           return "Recommended clothes to wear: winter bib tights; long-sleeve heavy wicking full turtleneck undershirt, long-sleeve jersey and lined cycling jacket; mittens or lobster claw gloves; balaclava; winter cycling shoes, wool socks with charcoal toe warmers."
         } else if (firstResponse[0].currently.temperature <= 30) {
           return "Recommended clothes to wear: heavyweight tights; long-sleeve heavy wicking turtleneck undershirt and heavy cycling jacket; heavy-weight gloves; lined skullcap; winter cycling shoes, shoe covers, wool socks with charcoal toe warmers."
@@ -237,7 +246,12 @@ function initAutocomplete() {
           $("#t-wind-value").html(`${wind} mph`);
           $("#t-rain-value").html(`${rain}%`);
           $("#t-uv-value").html(`${uv}`);
-          $("#t-aqi-value").html(`${aqi}`);
+          
+          if (secondResponse[0].data === null) {
+            $("#t-aqi-value").html("N/A");  
+          } else {
+            $("#t-aqi-value").html(Math.round(secondResponse[0].data.aqi));
+          }
           $("#t-temp-explanation").html(`${tempMessage()}`);
           $("#t-humid-explanation").html(`${humidityMessage()}`);
           $("#t-wind-explanation").html(
