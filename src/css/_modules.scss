@@ -23,6 +23,7 @@ header {
 .header_content {
   color: rgba(255, 255, 255, 1);
   height: auto;
+  padding-bottom: 5%;
   position: absolute;
   right: 50%;
   text-align: center;
@@ -33,7 +34,7 @@ header {
     width: 400px;
   }
   @include responsive(nixon) {
-    width: 650px;
+    width: 500px;
   }
   &:after {
     background: rgba(0, 0, 0, 0.2);
@@ -49,12 +50,14 @@ header {
 }
 
 p {
-.header_content & {
-  font-size: 1.5rem;
-  text-align: center;
+  .header_content & {
+    font-size: 1rem;
+    text-align: center;
+  }
+  @include responsive(harding) {
+    font-size: 1.5rem;
+  }
 }
-}
-
 
 //----------------------------------------------------------------------------
 //  MAIN
