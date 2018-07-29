@@ -1,4 +1,12 @@
-<h1>Bike Predict</h1>
+# CityMap
+
+Shared mobility vehicle locations (Coord.com API)
+
+- Washington, DC
+- Atlanta, GA
+- Chattanooga, TN
+
+# Bike Predict
 <p><a href="https://bikepredict.herokuapp.com/">Bike Predict</a> is a responsive app which allows users to input a location to see whether (s)he wants to bike today.  The map will show any available bike trails, weather information,
 and air quality information. </p>
 
