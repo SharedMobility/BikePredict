@@ -1,5 +1,5 @@
 # Bike Predict
-<p><a href="https://bikepredict.herokuapp.com/">Bike Predict</a> is a responsive app which allows users to input a location to see whether (s)he wants to bike today.  The map will show any available bike trails, weather information,
+<p><a href="https://bikepredict.herokuapp.com/">Bike Predict</a> is a responsive app which allows users to input a location to see whether they want to bike today.  The map will show any available bike trails, weather information,
 and air quality information. </p>
 
 ## Getting started
