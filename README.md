@@ -1,13 +1,3 @@
-# RideMap
-
-Where's my next ride? Shared mobility vehicle locations (Coord.com API)
-
-- Washington, DC
-- Atlanta, GA
-- Chattanooga, TN
-
-Project: Merge Bike Predict into the map above.
-
 # Bike Predict
 <p><a href="https://bikepredict.herokuapp.com/">Bike Predict</a> is a responsive app which allows users to input a location to see whether (s)he wants to bike today.  The map will show any available bike trails, weather information,
 and air quality information. </p>
